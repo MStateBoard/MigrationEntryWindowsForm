@@ -1,0 +1,1814 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HSC_Verification_2022Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HSC_Verification_2022.dbo.Tbl_College_Email' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Tbl_College_Email">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Case_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="College_Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Daily_Verify">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Seat_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="UNIQUE_ID_PAYMENT" Type="nvarchar" MaxLength="50" />
+          <Property Name="Payment_Status" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tbl_Daily_Verify_Complete">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Seat_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Case_No" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HSC_Verification_2022.dbo.Tbl_Div_Details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Tbl_Div_Details">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DIV_Initial" Type="nvarchar" MaxLength="50" />
+          <Property Name="Div_Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Div_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HSC_Verification_2022.dbo.Tbl_Division_Block' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Tbl_Division_Block">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Division_ID" Type="int" />
+          <Property Name="Payment_Head" Type="int" />
+          <Property Name="BDate" Type="date" />
+        </EntityType>
+        <EntityType Name="Tbl_Migration">
+          <Key>
+            <PropertyRef Name="Unique_ID_Payment" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Case_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Surname" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Father_Name" Type="nvarchar(max)" />
+          <Property Name="Mother_Name" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Mobile_No1" Type="nvarchar(max)" />
+          <Property Name="Mobile_No2" Type="nvarchar(max)" />
+          <Property Name="Seat_No" Type="nvarchar(max)" />
+          <Property Name="Exam" Type="nvarchar(max)" />
+          <Property Name="Year" Type="nvarchar(max)" />
+          <Property Name="Marks" Type="nvarchar(max)" />
+          <Property Name="Percentage" Type="nvarchar(max)" />
+          <Property Name="Center_No" Type="nvarchar(max)" />
+          <Property Name="Center_Name" Type="nvarchar(max)" />
+          <Property Name="Index_No" Type="nvarchar(max)" />
+          <Property Name="School_Name" Type="nvarchar(max)" />
+          <Property Name="Copy_Status" Type="nvarchar(max)" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="Unique_ID_Payment" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Unique_ID_Seat_No" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Div_Code" Type="int" />
+          <Property Name="Pre_Ref_ID" Type="int" />
+          <Property Name="OnDateTime" Type="datetime" />
+          <Property Name="Email_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Delivery_Mode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar(max)" />
+          <Property Name="Responce" Type="nvarchar(max)" />
+          <Property Name="Reply_DateTime" Type="datetime" />
+          <Property Name="Active" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HSC_Verification_2022.dbo.Tbl_Migration_Pri' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Tbl_Migration_Pri">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Unique_ID_Seat_No" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Father_Name" Type="nvarchar(max)" />
+          <Property Name="Mother_Name" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Mobile_No1" Type="nvarchar(max)" />
+          <Property Name="Mobile_No2" Type="nvarchar(max)" />
+          <Property Name="Seat_No" Type="nvarchar(max)" />
+          <Property Name="Exam" Type="nvarchar(max)" />
+          <Property Name="Year" Type="nvarchar(max)" />
+          <Property Name="Marks" Type="nvarchar(max)" />
+          <Property Name="Percentage" Type="nvarchar(max)" />
+          <Property Name="Center_No" Type="nvarchar(max)" />
+          <Property Name="Center_Name" Type="nvarchar(max)" />
+          <Property Name="Index_No" Type="nvarchar(max)" />
+          <Property Name="School_Name" Type="nvarchar(max)" />
+          <Property Name="Copy_Status" Type="nvarchar(max)" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="Unique_ID_Payment" Type="nvarchar(max)" />
+          <Property Name="Unique_ID_Seat_No" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Div_Code" Type="int" />
+          <Property Name="OnDateTime" Type="datetime" />
+          <Property Name="Email_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Delivery_Mode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Payment">
+          <Key>
+            <PropertyRef Name="clientTxnId" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pgRespCode" Type="nvarchar(max)" />
+          <Property Name="PGTxnNo" Type="nvarchar(max)" />
+          <Property Name="SabPaisaTxId" Type="nvarchar(max)" />
+          <Property Name="issuerRefNo" Type="nvarchar(max)" />
+          <Property Name="authIdCode" Type="nvarchar(max)" />
+          <Property Name="amount" Type="nvarchar(max)" />
+          <Property Name="clientTxnId" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="firstName" Type="nvarchar(max)" />
+          <Property Name="lastName" Type="nvarchar(max)" />
+          <Property Name="payMode" Type="nvarchar(max)" />
+          <Property Name="email" Type="nvarchar(max)" />
+          <Property Name="mobileNo" Type="nvarchar(max)" />
+          <Property Name="spRespCode" Type="nvarchar(max)" />
+          <Property Name="cid" Type="nvarchar(max)" />
+          <Property Name="bid" Type="nvarchar(max)" />
+          <Property Name="clientCode" Type="nvarchar(max)" />
+          <Property Name="payeeProfile" Type="nvarchar(max)" />
+          <Property Name="transDate" Type="nvarchar(max)" />
+          <Property Name="spRespStatus" Type="nvarchar(max)" />
+          <Property Name="m3" Type="nvarchar(max)" />
+          <Property Name="challanNo" Type="nvarchar(max)" />
+          <Property Name="reMsg" Type="nvarchar(max)" />
+          <Property Name="orgTxnAmount" Type="nvarchar(max)" />
+          <Property Name="programId" Type="nvarchar(max)" />
+          <Property Name="midName" Type="nvarchar(max)" />
+          <Property Name="Add" Type="nvarchar(max)" />
+          <Property Name="param1" Type="nvarchar(max)" />
+          <Property Name="param2" Type="nvarchar(max)" />
+          <Property Name="param3" Type="nvarchar(max)" />
+          <Property Name="param4" Type="nvarchar(max)" />
+          <Property Name="udf5" Type="nvarchar(max)" />
+          <Property Name="udf6" Type="nvarchar(max)" />
+          <Property Name="udf7" Type="nvarchar(max)" />
+          <Property Name="udf8" Type="nvarchar(max)" />
+          <Property Name="udf9" Type="nvarchar(max)" />
+          <Property Name="udf10" Type="nvarchar(max)" />
+          <Property Name="udf11" Type="nvarchar(max)" />
+          <Property Name="udf12" Type="nvarchar(max)" />
+          <Property Name="udf13" Type="nvarchar(max)" />
+          <Property Name="udf14" Type="nvarchar(max)" />
+          <Property Name="udf15" Type="nvarchar(max)" />
+          <Property Name="udf16" Type="nvarchar(max)" />
+          <Property Name="udf17" Type="nvarchar(max)" />
+          <Property Name="udf18" Type="nvarchar(max)" />
+          <Property Name="udf19" Type="nvarchar(max)" />
+          <Property Name="udf20" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HSC_Verification_2022.dbo.Tbl_Payment_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Tbl_Payment_1">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="clientTxnId" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pgRespCode" Type="nvarchar(max)" />
+          <Property Name="PGTxnNo" Type="nvarchar(max)" />
+          <Property Name="SabPaisaTxId" Type="nvarchar(max)" />
+          <Property Name="issuerRefNo" Type="nvarchar(max)" />
+          <Property Name="authIdCode" Type="nvarchar(max)" />
+          <Property Name="amount" Type="nvarchar(max)" />
+          <Property Name="clientTxnId" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="firstName" Type="nvarchar(max)" />
+          <Property Name="lastName" Type="nvarchar(max)" />
+          <Property Name="payMode" Type="nvarchar(max)" />
+          <Property Name="email" Type="nvarchar(max)" />
+          <Property Name="mobileNo" Type="nvarchar(max)" />
+          <Property Name="spRespCode" Type="nvarchar(max)" />
+          <Property Name="cid" Type="nvarchar(max)" />
+          <Property Name="bid" Type="nvarchar(max)" />
+          <Property Name="clientCode" Type="nvarchar(max)" />
+          <Property Name="payeeProfile" Type="nvarchar(max)" />
+          <Property Name="transDate" Type="nvarchar(max)" />
+          <Property Name="spRespStatus" Type="nvarchar(max)" />
+          <Property Name="m3" Type="nvarchar(max)" />
+          <Property Name="challanNo" Type="nvarchar(max)" />
+          <Property Name="reMsg" Type="nvarchar(max)" />
+          <Property Name="orgTxnAmount" Type="nvarchar(max)" />
+          <Property Name="programId" Type="nvarchar(max)" />
+          <Property Name="midName" Type="nvarchar(max)" />
+          <Property Name="Add" Type="nvarchar(max)" />
+          <Property Name="param1" Type="nvarchar(max)" />
+          <Property Name="param2" Type="nvarchar(max)" />
+          <Property Name="param3" Type="nvarchar(max)" />
+          <Property Name="param4" Type="nvarchar(max)" />
+          <Property Name="udf5" Type="nvarchar(max)" />
+          <Property Name="udf6" Type="nvarchar(max)" />
+          <Property Name="udf7" Type="nvarchar(max)" />
+          <Property Name="udf8" Type="nvarchar(max)" />
+          <Property Name="udf9" Type="nvarchar(max)" />
+          <Property Name="udf10" Type="nvarchar(max)" />
+          <Property Name="udf11" Type="nvarchar(max)" />
+          <Property Name="udf12" Type="nvarchar(max)" />
+          <Property Name="udf13" Type="nvarchar(max)" />
+          <Property Name="udf14" Type="nvarchar(max)" />
+          <Property Name="udf15" Type="nvarchar(max)" />
+          <Property Name="udf16" Type="nvarchar(max)" />
+          <Property Name="udf17" Type="nvarchar(max)" />
+          <Property Name="udf18" Type="nvarchar(max)" />
+          <Property Name="udf19" Type="nvarchar(max)" />
+          <Property Name="udf20" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HSC_Verification_2022.dbo.Tbl_Payment_Error' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Tbl_Payment_Error">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pgRespCode" Type="nvarchar(max)" />
+          <Property Name="PGTxnNo" Type="nvarchar(max)" />
+          <Property Name="SabPaisaTxId" Type="nvarchar(max)" />
+          <Property Name="issuerRefNo" Type="nvarchar(max)" />
+          <Property Name="authIdCode" Type="nvarchar(max)" />
+          <Property Name="amount" Type="nvarchar(max)" />
+          <Property Name="clientTxnId" Type="nvarchar(max)" />
+          <Property Name="firstName" Type="nvarchar(max)" />
+          <Property Name="lastName" Type="nvarchar(max)" />
+          <Property Name="payMode" Type="nvarchar(max)" />
+          <Property Name="email" Type="nvarchar(max)" />
+          <Property Name="mobileNo" Type="nvarchar(max)" />
+          <Property Name="spRespCode" Type="nvarchar(max)" />
+          <Property Name="cid" Type="nvarchar(max)" />
+          <Property Name="bid" Type="nvarchar(max)" />
+          <Property Name="clientCode" Type="nvarchar(max)" />
+          <Property Name="payeeProfile" Type="nvarchar(max)" />
+          <Property Name="transDate" Type="nvarchar(max)" />
+          <Property Name="spRespStatus" Type="nvarchar(max)" />
+          <Property Name="m3" Type="nvarchar(max)" />
+          <Property Name="challanNo" Type="nvarchar(max)" />
+          <Property Name="reMsg" Type="nvarchar(max)" />
+          <Property Name="orgTxnAmount" Type="nvarchar(max)" />
+          <Property Name="programId" Type="nvarchar(max)" />
+          <Property Name="midName" Type="nvarchar(max)" />
+          <Property Name="Add" Type="nvarchar(max)" />
+          <Property Name="param1" Type="nvarchar(max)" />
+          <Property Name="param2" Type="nvarchar(max)" />
+          <Property Name="param3" Type="nvarchar(max)" />
+          <Property Name="param4" Type="nvarchar(max)" />
+          <Property Name="udf5" Type="nvarchar(max)" />
+          <Property Name="udf6" Type="nvarchar(max)" />
+          <Property Name="udf7" Type="nvarchar(max)" />
+          <Property Name="udf8" Type="nvarchar(max)" />
+          <Property Name="udf9" Type="nvarchar(max)" />
+          <Property Name="udf10" Type="nvarchar(max)" />
+          <Property Name="udf11" Type="nvarchar(max)" />
+          <Property Name="udf12" Type="nvarchar(max)" />
+          <Property Name="udf13" Type="nvarchar(max)" />
+          <Property Name="udf14" Type="nvarchar(max)" />
+          <Property Name="udf15" Type="nvarchar(max)" />
+          <Property Name="udf16" Type="nvarchar(max)" />
+          <Property Name="udf17" Type="nvarchar(max)" />
+          <Property Name="udf18" Type="nvarchar(max)" />
+          <Property Name="udf19" Type="nvarchar(max)" />
+          <Property Name="udf20" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HSC_Verification_2022.dbo.Tbl_Student_Subject' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Tbl_Student_Subject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Seat_No" Type="nvarchar" MaxLength="7" />
+          <Property Name="Case_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Head" Type="nvarchar" MaxLength="3" />
+          <Property Name="Sub_Code" Type="nvarchar" MaxLength="4" />
+          <Property Name="Actual_Marks" Type="int" />
+          <Property Name="Update_Marks" Type="int" />
+          <Property Name="Active" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HSC_Verification_2022.dbo.Tbl_Student_Subject_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Tbl_Student_Subject_1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Seat_No" Type="nvarchar" MaxLength="7" />
+          <Property Name="Case_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Head" Type="nvarchar" MaxLength="3" />
+          <Property Name="Sub_Code" Type="nvarchar" MaxLength="4" />
+          <Property Name="Actual_Marks" Type="int" />
+          <Property Name="Update_Marks" Type="int" />
+          <Property Name="Active" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Verification">
+          <Key>
+            <PropertyRef Name="Unique_ID_Seat_No" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Seat_No" Type="nvarchar" MaxLength="7" Nullable="false" />
+          <Property Name="Payment_Head" Type="int" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Taluka" Type="nvarchar(max)" />
+          <Property Name="District" Type="nvarchar(max)" />
+          <Property Name="Pincode" Type="nvarchar" MaxLength="6" />
+          <Property Name="Mobile_No" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email_ID" Type="nvarchar(max)" />
+          <Property Name="Delivery_Mode" Type="nvarchar" MaxLength="20" />
+          <Property Name="Charge" Type="float" />
+          <Property Name="Total_Payment" Type="float" />
+          <Property Name="SUB1" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB2" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB3" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB4" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB5" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB6" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB7" Type="nvarchar" MaxLength="3" />
+          <Property Name="Unique_ID_Payment" Type="nvarchar(max)" />
+          <Property Name="Unique_ID_Seat_No" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Case_No" Type="nvarchar" MaxLength="20" />
+          <Property Name="Div_Code" Type="int" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Responce" Type="nvarchar(max)" />
+          <Property Name="Reply_DateTime" Type="datetime" />
+          <Property Name="Pre_Ref_ID" Type="int" />
+          <Property Name="Active" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Verification_1">
+          <Key>
+            <PropertyRef Name="Unique_ID_Seat_No" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Seat_No" Type="nvarchar" MaxLength="7" Nullable="false" />
+          <Property Name="Payment_Head" Type="int" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Taluka" Type="nvarchar(max)" />
+          <Property Name="District" Type="nvarchar(max)" />
+          <Property Name="Pincode" Type="nvarchar" MaxLength="6" />
+          <Property Name="Mobile_No" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email_ID" Type="nvarchar(max)" />
+          <Property Name="Delivery_Mode" Type="nvarchar" MaxLength="20" />
+          <Property Name="Charge" Type="float" />
+          <Property Name="Total_Payment" Type="float" />
+          <Property Name="SUB1" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB2" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB3" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB4" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB5" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB6" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB7" Type="nvarchar" MaxLength="3" />
+          <Property Name="Unique_ID_Payment" Type="nvarchar(max)" />
+          <Property Name="Unique_ID_Seat_No" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Case_No" Type="nvarchar" MaxLength="20" />
+          <Property Name="Div_Code" Type="int" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Responce" Type="nvarchar(max)" />
+          <Property Name="Reply_DateTime" Type="datetime" />
+          <Property Name="Pre_Ref_ID" Type="int" />
+          <Property Name="Active" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Verification_Pri">
+          <Key>
+            <PropertyRef Name="Unique_ID_Payment" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Seat_No" Type="nvarchar" MaxLength="7" Nullable="false" />
+          <Property Name="Payment_Head" Type="int" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Taluka" Type="nvarchar(max)" />
+          <Property Name="District" Type="nvarchar(max)" />
+          <Property Name="Pincode" Type="nvarchar" MaxLength="6" />
+          <Property Name="Mobile_No" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email_ID" Type="nvarchar(max)" />
+          <Property Name="Delivery_Mode" Type="nvarchar" MaxLength="20" />
+          <Property Name="Charge" Type="float" />
+          <Property Name="Total_Payment" Type="float" />
+          <Property Name="SUB1" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB2" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB3" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB4" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB5" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB6" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB7" Type="nvarchar" MaxLength="3" />
+          <Property Name="Unique_ID_Payment" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Unique_ID_Seat_No" Type="nvarchar(max)" />
+          <Property Name="Case_No" Type="nvarchar" MaxLength="20" />
+          <Property Name="Div_Code" Type="int" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Responce" Type="nvarchar(max)" />
+          <Property Name="Reply_DateTime" Type="datetime" />
+          <Property Name="Active" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Verification_Pri_1">
+          <Key>
+            <PropertyRef Name="Unique_ID_Payment" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Seat_No" Type="nvarchar" MaxLength="7" Nullable="false" />
+          <Property Name="Payment_Head" Type="int" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Taluka" Type="nvarchar(max)" />
+          <Property Name="District" Type="nvarchar(max)" />
+          <Property Name="Pincode" Type="nvarchar" MaxLength="6" />
+          <Property Name="Mobile_No" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email_ID" Type="nvarchar(max)" />
+          <Property Name="Delivery_Mode" Type="nvarchar" MaxLength="20" />
+          <Property Name="Charge" Type="float" />
+          <Property Name="Total_Payment" Type="float" />
+          <Property Name="SUB1" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB2" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB3" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB4" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB5" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB6" Type="nvarchar" MaxLength="3" />
+          <Property Name="SUB7" Type="nvarchar" MaxLength="3" />
+          <Property Name="Unique_ID_Payment" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Unique_ID_Seat_No" Type="nvarchar(max)" />
+          <Property Name="Case_No" Type="nvarchar" MaxLength="20" />
+          <Property Name="Div_Code" Type="int" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Responce" Type="nvarchar(max)" />
+          <Property Name="Reply_DateTime" Type="datetime" />
+          <Property Name="Active" Type="int" />
+        </EntityType>
+        <Function Name="SP_GET_STUD_MARKSHEET" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Seat_No" Type="nvarchar" Mode="In" />
+          <Parameter Name="Div_Code" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_INSERT_PENDING_SUBJECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ACTION" Type="nvarchar" Mode="In" />
+          <Parameter Name="Seat_No" Type="nvarchar" Mode="In" />
+          <Parameter Name="Div_code" Type="int" Mode="In" />
+          <Parameter Name="Payment_Head" Type="int" Mode="In" />
+          <Parameter Name="Unique_ID_Payment" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Unique_ID_Seat_No" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Case_No" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Pre_Ref_ID" Type="int" Mode="In" />
+          <Parameter Name="RESULT" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="SP_INSERT_STUDENT_DATA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ACTION" Type="nvarchar" Mode="In" />
+          <Parameter Name="Seat_No" Type="nvarchar" Mode="In" />
+          <Parameter Name="Div_code" Type="int" Mode="In" />
+          <Parameter Name="Payment_Head" Type="int" Mode="In" />
+          <Parameter Name="Unique_ID_Payment" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Unique_ID_Seat_No" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Pre_Ref_ID" Type="int" Mode="In" />
+          <Parameter Name="RESULT" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="SP_INSERT_STUDENT_DATA_PRI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ACTION" Type="nvarchar" Mode="In" />
+          <Parameter Name="Seat_No" Type="nvarchar" Mode="In" />
+          <Parameter Name="Payment_Head" Type="int" Mode="In" />
+          <Parameter Name="Div_Code" Type="int" Mode="In" />
+          <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Taluka" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="District" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Pincode" Type="nvarchar" Mode="In" />
+          <Parameter Name="Mobile_No" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email_ID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Delivery_Mode" Type="nvarchar" Mode="In" />
+          <Parameter Name="Charge" Type="float" Mode="In" />
+          <Parameter Name="Total_Payment" Type="float" Mode="In" />
+          <Parameter Name="SUB1" Type="nvarchar" Mode="In" />
+          <Parameter Name="SUB2" Type="nvarchar" Mode="In" />
+          <Parameter Name="SUB3" Type="nvarchar" Mode="In" />
+          <Parameter Name="SUB4" Type="nvarchar" Mode="In" />
+          <Parameter Name="SUB5" Type="nvarchar" Mode="In" />
+          <Parameter Name="SUB6" Type="nvarchar" Mode="In" />
+          <Parameter Name="SUB7" Type="nvarchar" Mode="In" />
+          <Parameter Name="Unique_ID_Payment" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Unique_ID_Seat_No" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SP_INSERT_STUDENT_MIGRATION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ACTION" Type="nvarchar" Mode="In" />
+          <Parameter Name="Seat_No" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Div_Code" Type="int" Mode="In" />
+          <Parameter Name="Unique_ID_Payment" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Unique_ID_Seat_No" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Pre_Ref_ID" Type="int" Mode="In" />
+          <Parameter Name="Result" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="SP_INSERT_STUDENT_MIGRATION_PRI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ACTION" Type="nvarchar" Mode="In" />
+          <Parameter Name="Surname" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Father_Name" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Mother_Name" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Mobile_No1" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Mobile_No2" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Seat_No" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Exam" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Year" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Marks" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Percentage" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Center_No" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Center_Name" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Index_No" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="School_Name" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Copy_Status" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Amount" Type="int" Mode="In" />
+          <Parameter Name="Div_Code" Type="int" Mode="In" />
+          <Parameter Name="Unique_ID_Payment" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Unique_ID_Seat_No" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Email_ID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Delivery_Mode" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Result" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="SP_INSERT_STUDENT_MIGRATION_TRANSFER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ACTION" Type="nvarchar" Mode="In" />
+          <Parameter Name="Seat_No" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Div_Code" Type="int" Mode="In" />
+          <Parameter Name="Unique_ID_Payment" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Unique_ID_Seat_No" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Pre_Ref_ID" Type="int" Mode="In" />
+          <Parameter Name="Result" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="Sp_Payment_Entry" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="clientTxnId" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="firstName" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="email" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="spRespStatus" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="udf17" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="udf18" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="udf20" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="udf19" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <EntityContainer Name="HSC_Verification_2022ModelStoreContainer">
+          <EntitySet Name="Tbl_Daily_Verify" EntityType="Self.Tbl_Daily_Verify" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Daily_Verify_Complete" EntityType="Self.Tbl_Daily_Verify_Complete" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Migration" EntityType="Self.Tbl_Migration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Payment" EntityType="Self.Tbl_Payment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Verification" EntityType="Self.Tbl_Verification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Verification_1" EntityType="Self.Tbl_Verification_1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Verification_Pri" EntityType="Self.Tbl_Verification_Pri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Verification_Pri_1" EntityType="Self.Tbl_Verification_Pri_1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_College_Email" EntityType="Self.Tbl_College_Email" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tbl_College_Email].[ID] AS [ID], 
+    [Tbl_College_Email].[Case_No] AS [Case_No], 
+    [Tbl_College_Email].[College_Email] AS [College_Email], 
+    [Tbl_College_Email].[Active] AS [Active]
+    FROM [dbo].[Tbl_College_Email] AS [Tbl_College_Email]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Tbl_Div_Details" EntityType="Self.Tbl_Div_Details" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tbl_Div_Details].[ID] AS [ID], 
+    [Tbl_Div_Details].[DIV_Initial] AS [DIV_Initial], 
+    [Tbl_Div_Details].[Div_Code] AS [Div_Code], 
+    [Tbl_Div_Details].[Div_Name] AS [Div_Name], 
+    [Tbl_Div_Details].[Password] AS [Password]
+    FROM [dbo].[Tbl_Div_Details] AS [Tbl_Div_Details]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Tbl_Division_Block" EntityType="Self.Tbl_Division_Block" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tbl_Division_Block].[ID] AS [ID], 
+    [Tbl_Division_Block].[Division_ID] AS [Division_ID], 
+    [Tbl_Division_Block].[Payment_Head] AS [Payment_Head], 
+    [Tbl_Division_Block].[BDate] AS [BDate]
+    FROM [dbo].[Tbl_Division_Block] AS [Tbl_Division_Block]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Tbl_Migration_Pri" EntityType="Self.Tbl_Migration_Pri" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tbl_Migration_Pri].[ID] AS [ID], 
+    [Tbl_Migration_Pri].[Surname] AS [Surname], 
+    [Tbl_Migration_Pri].[Name] AS [Name], 
+    [Tbl_Migration_Pri].[Father_Name] AS [Father_Name], 
+    [Tbl_Migration_Pri].[Mother_Name] AS [Mother_Name], 
+    [Tbl_Migration_Pri].[Address] AS [Address], 
+    [Tbl_Migration_Pri].[Mobile_No1] AS [Mobile_No1], 
+    [Tbl_Migration_Pri].[Mobile_No2] AS [Mobile_No2], 
+    [Tbl_Migration_Pri].[Seat_No] AS [Seat_No], 
+    [Tbl_Migration_Pri].[Exam] AS [Exam], 
+    [Tbl_Migration_Pri].[Year] AS [Year], 
+    [Tbl_Migration_Pri].[Marks] AS [Marks], 
+    [Tbl_Migration_Pri].[Percentage] AS [Percentage], 
+    [Tbl_Migration_Pri].[Center_No] AS [Center_No], 
+    [Tbl_Migration_Pri].[Center_Name] AS [Center_Name], 
+    [Tbl_Migration_Pri].[Index_No] AS [Index_No], 
+    [Tbl_Migration_Pri].[School_Name] AS [School_Name], 
+    [Tbl_Migration_Pri].[Copy_Status] AS [Copy_Status], 
+    [Tbl_Migration_Pri].[Amount] AS [Amount], 
+    [Tbl_Migration_Pri].[Unique_ID_Payment] AS [Unique_ID_Payment], 
+    [Tbl_Migration_Pri].[Unique_ID_Seat_No] AS [Unique_ID_Seat_No], 
+    [Tbl_Migration_Pri].[Div_Code] AS [Div_Code], 
+    [Tbl_Migration_Pri].[OnDateTime] AS [OnDateTime], 
+    [Tbl_Migration_Pri].[Email_ID] AS [Email_ID], 
+    [Tbl_Migration_Pri].[Delivery_Mode] AS [Delivery_Mode], 
+    [Tbl_Migration_Pri].[Active] AS [Active]
+    FROM [dbo].[Tbl_Migration_Pri] AS [Tbl_Migration_Pri]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Tbl_Payment_1" EntityType="Self.Tbl_Payment_1" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tbl_Payment_1].[ID] AS [ID], 
+    [Tbl_Payment_1].[pgRespCode] AS [pgRespCode], 
+    [Tbl_Payment_1].[PGTxnNo] AS [PGTxnNo], 
+    [Tbl_Payment_1].[SabPaisaTxId] AS [SabPaisaTxId], 
+    [Tbl_Payment_1].[issuerRefNo] AS [issuerRefNo], 
+    [Tbl_Payment_1].[authIdCode] AS [authIdCode], 
+    [Tbl_Payment_1].[amount] AS [amount], 
+    [Tbl_Payment_1].[clientTxnId] AS [clientTxnId], 
+    [Tbl_Payment_1].[firstName] AS [firstName], 
+    [Tbl_Payment_1].[lastName] AS [lastName], 
+    [Tbl_Payment_1].[payMode] AS [payMode], 
+    [Tbl_Payment_1].[email] AS [email], 
+    [Tbl_Payment_1].[mobileNo] AS [mobileNo], 
+    [Tbl_Payment_1].[spRespCode] AS [spRespCode], 
+    [Tbl_Payment_1].[cid] AS [cid], 
+    [Tbl_Payment_1].[bid] AS [bid], 
+    [Tbl_Payment_1].[clientCode] AS [clientCode], 
+    [Tbl_Payment_1].[payeeProfile] AS [payeeProfile], 
+    [Tbl_Payment_1].[transDate] AS [transDate], 
+    [Tbl_Payment_1].[spRespStatus] AS [spRespStatus], 
+    [Tbl_Payment_1].[m3] AS [m3], 
+    [Tbl_Payment_1].[challanNo] AS [challanNo], 
+    [Tbl_Payment_1].[reMsg] AS [reMsg], 
+    [Tbl_Payment_1].[orgTxnAmount] AS [orgTxnAmount], 
+    [Tbl_Payment_1].[programId] AS [programId], 
+    [Tbl_Payment_1].[midName] AS [midName], 
+    [Tbl_Payment_1].[Add] AS [Add], 
+    [Tbl_Payment_1].[param1] AS [param1], 
+    [Tbl_Payment_1].[param2] AS [param2], 
+    [Tbl_Payment_1].[param3] AS [param3], 
+    [Tbl_Payment_1].[param4] AS [param4], 
+    [Tbl_Payment_1].[udf5] AS [udf5], 
+    [Tbl_Payment_1].[udf6] AS [udf6], 
+    [Tbl_Payment_1].[udf7] AS [udf7], 
+    [Tbl_Payment_1].[udf8] AS [udf8], 
+    [Tbl_Payment_1].[udf9] AS [udf9], 
+    [Tbl_Payment_1].[udf10] AS [udf10], 
+    [Tbl_Payment_1].[udf11] AS [udf11], 
+    [Tbl_Payment_1].[udf12] AS [udf12], 
+    [Tbl_Payment_1].[udf13] AS [udf13], 
+    [Tbl_Payment_1].[udf14] AS [udf14], 
+    [Tbl_Payment_1].[udf15] AS [udf15], 
+    [Tbl_Payment_1].[udf16] AS [udf16], 
+    [Tbl_Payment_1].[udf17] AS [udf17], 
+    [Tbl_Payment_1].[udf18] AS [udf18], 
+    [Tbl_Payment_1].[udf19] AS [udf19], 
+    [Tbl_Payment_1].[udf20] AS [udf20]
+    FROM [dbo].[Tbl_Payment_1] AS [Tbl_Payment_1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Tbl_Payment_Error" EntityType="Self.Tbl_Payment_Error" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tbl_Payment_Error].[ID] AS [ID], 
+    [Tbl_Payment_Error].[pgRespCode] AS [pgRespCode], 
+    [Tbl_Payment_Error].[PGTxnNo] AS [PGTxnNo], 
+    [Tbl_Payment_Error].[SabPaisaTxId] AS [SabPaisaTxId], 
+    [Tbl_Payment_Error].[issuerRefNo] AS [issuerRefNo], 
+    [Tbl_Payment_Error].[authIdCode] AS [authIdCode], 
+    [Tbl_Payment_Error].[amount] AS [amount], 
+    [Tbl_Payment_Error].[clientTxnId] AS [clientTxnId], 
+    [Tbl_Payment_Error].[firstName] AS [firstName], 
+    [Tbl_Payment_Error].[lastName] AS [lastName], 
+    [Tbl_Payment_Error].[payMode] AS [payMode], 
+    [Tbl_Payment_Error].[email] AS [email], 
+    [Tbl_Payment_Error].[mobileNo] AS [mobileNo], 
+    [Tbl_Payment_Error].[spRespCode] AS [spRespCode], 
+    [Tbl_Payment_Error].[cid] AS [cid], 
+    [Tbl_Payment_Error].[bid] AS [bid], 
+    [Tbl_Payment_Error].[clientCode] AS [clientCode], 
+    [Tbl_Payment_Error].[payeeProfile] AS [payeeProfile], 
+    [Tbl_Payment_Error].[transDate] AS [transDate], 
+    [Tbl_Payment_Error].[spRespStatus] AS [spRespStatus], 
+    [Tbl_Payment_Error].[m3] AS [m3], 
+    [Tbl_Payment_Error].[challanNo] AS [challanNo], 
+    [Tbl_Payment_Error].[reMsg] AS [reMsg], 
+    [Tbl_Payment_Error].[orgTxnAmount] AS [orgTxnAmount], 
+    [Tbl_Payment_Error].[programId] AS [programId], 
+    [Tbl_Payment_Error].[midName] AS [midName], 
+    [Tbl_Payment_Error].[Add] AS [Add], 
+    [Tbl_Payment_Error].[param1] AS [param1], 
+    [Tbl_Payment_Error].[param2] AS [param2], 
+    [Tbl_Payment_Error].[param3] AS [param3], 
+    [Tbl_Payment_Error].[param4] AS [param4], 
+    [Tbl_Payment_Error].[udf5] AS [udf5], 
+    [Tbl_Payment_Error].[udf6] AS [udf6], 
+    [Tbl_Payment_Error].[udf7] AS [udf7], 
+    [Tbl_Payment_Error].[udf8] AS [udf8], 
+    [Tbl_Payment_Error].[udf9] AS [udf9], 
+    [Tbl_Payment_Error].[udf10] AS [udf10], 
+    [Tbl_Payment_Error].[udf11] AS [udf11], 
+    [Tbl_Payment_Error].[udf12] AS [udf12], 
+    [Tbl_Payment_Error].[udf13] AS [udf13], 
+    [Tbl_Payment_Error].[udf14] AS [udf14], 
+    [Tbl_Payment_Error].[udf15] AS [udf15], 
+    [Tbl_Payment_Error].[udf16] AS [udf16], 
+    [Tbl_Payment_Error].[udf17] AS [udf17], 
+    [Tbl_Payment_Error].[udf18] AS [udf18], 
+    [Tbl_Payment_Error].[udf19] AS [udf19], 
+    [Tbl_Payment_Error].[udf20] AS [udf20]
+    FROM [dbo].[Tbl_Payment_Error] AS [Tbl_Payment_Error]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Tbl_Student_Subject" EntityType="Self.Tbl_Student_Subject" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tbl_Student_Subject].[ID] AS [ID], 
+    [Tbl_Student_Subject].[Seat_No] AS [Seat_No], 
+    [Tbl_Student_Subject].[Case_No] AS [Case_No], 
+    [Tbl_Student_Subject].[Head] AS [Head], 
+    [Tbl_Student_Subject].[Sub_Code] AS [Sub_Code], 
+    [Tbl_Student_Subject].[Actual_Marks] AS [Actual_Marks], 
+    [Tbl_Student_Subject].[Update_Marks] AS [Update_Marks], 
+    [Tbl_Student_Subject].[Active] AS [Active]
+    FROM [dbo].[Tbl_Student_Subject] AS [Tbl_Student_Subject]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Tbl_Student_Subject_1" EntityType="Self.Tbl_Student_Subject_1" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tbl_Student_Subject_1].[ID] AS [ID], 
+    [Tbl_Student_Subject_1].[Seat_No] AS [Seat_No], 
+    [Tbl_Student_Subject_1].[Case_No] AS [Case_No], 
+    [Tbl_Student_Subject_1].[Head] AS [Head], 
+    [Tbl_Student_Subject_1].[Sub_Code] AS [Sub_Code], 
+    [Tbl_Student_Subject_1].[Actual_Marks] AS [Actual_Marks], 
+    [Tbl_Student_Subject_1].[Update_Marks] AS [Update_Marks], 
+    [Tbl_Student_Subject_1].[Active] AS [Active]
+    FROM [dbo].[Tbl_Student_Subject_1] AS [Tbl_Student_Subject_1]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HSC_Verification_2022Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Tbl_Daily_Verify">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Seat_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UNIQUE_ID_PAYMENT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Payment_Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tbl_Daily_Verify_Complete">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Seat_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Case_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_Migration">
+          <Key>
+            <PropertyRef Name="Unique_ID_Payment" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Case_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Father_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mother_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_No1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_No2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Seat_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Exam" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Marks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Percentage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Center_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Center_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Index_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="School_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Copy_Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="Unique_ID_Payment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Div_Code" Type="Int32" />
+          <Property Name="Pre_Ref_ID" Type="Int32" />
+          <Property Name="OnDateTime" Type="DateTime" Precision="3" />
+          <Property Name="Email_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Delivery_Mode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Responce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Reply_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Active" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tbl_Payment">
+          <Key>
+            <PropertyRef Name="clientTxnId" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pgRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PGTxnNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SabPaisaTxId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="issuerRefNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="authIdCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="clientTxnId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="lastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="payMode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="spRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="bid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="clientCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="payeeProfile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="transDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="spRespStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="m3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="challanNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="reMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="orgTxnAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="programId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="midName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Add" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="param1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="param2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="param3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="param4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf16" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf17" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf18" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf19" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_Verification">
+          <Key>
+            <PropertyRef Name="Unique_ID_Seat_No" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Seat_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Payment_Head" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Delivery_Mode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Charge" Type="Double" />
+          <Property Name="Total_Payment" Type="Double" />
+          <Property Name="SUB1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB4" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB5" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB6" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB7" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Unique_ID_Payment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Case_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Div_Code" Type="Int32" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Responce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Reply_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Pre_Ref_ID" Type="Int32" />
+          <Property Name="Active" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tbl_Verification_1">
+          <Key>
+            <PropertyRef Name="Unique_ID_Seat_No" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Seat_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Payment_Head" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Delivery_Mode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Charge" Type="Double" />
+          <Property Name="Total_Payment" Type="Double" />
+          <Property Name="SUB1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB4" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB5" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB6" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB7" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Unique_ID_Payment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Case_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Div_Code" Type="Int32" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Responce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Reply_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Pre_Ref_ID" Type="Int32" />
+          <Property Name="Active" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tbl_Verification_Pri">
+          <Key>
+            <PropertyRef Name="Unique_ID_Payment" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Seat_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Payment_Head" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Delivery_Mode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Charge" Type="Double" />
+          <Property Name="Total_Payment" Type="Double" />
+          <Property Name="SUB1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB4" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB5" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB6" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB7" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Unique_ID_Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Case_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Div_Code" Type="Int32" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Responce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Reply_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Active" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tbl_Verification_Pri_1">
+          <Key>
+            <PropertyRef Name="Unique_ID_Payment" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Seat_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Payment_Head" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Delivery_Mode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Charge" Type="Double" />
+          <Property Name="Total_Payment" Type="Double" />
+          <Property Name="SUB1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB4" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB5" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB6" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SUB7" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Unique_ID_Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Case_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Div_Code" Type="Int32" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Responce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Reply_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Active" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tbl_College_Email">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Case_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="College_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tbl_Div_Details">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DIV_Initial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Div_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Div_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_Division_Block">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Division_ID" Type="Int32" />
+          <Property Name="Payment_Head" Type="Int32" />
+          <Property Name="BDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Tbl_Migration_Pri">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Unique_ID_Seat_No" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Father_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mother_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_No1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_No2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Seat_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Exam" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Marks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Percentage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Center_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Center_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Index_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="School_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Copy_Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="Unique_ID_Payment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Div_Code" Type="Int32" />
+          <Property Name="OnDateTime" Type="DateTime" Precision="3" />
+          <Property Name="Email_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Delivery_Mode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tbl_Payment_1">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="clientTxnId" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pgRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PGTxnNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SabPaisaTxId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="issuerRefNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="authIdCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="clientTxnId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="lastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="payMode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="spRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="bid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="clientCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="payeeProfile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="transDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="spRespStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="m3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="challanNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="reMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="orgTxnAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="programId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="midName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Add" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="param1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="param2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="param3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="param4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf16" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf17" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf18" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf19" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_Payment_Error">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pgRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PGTxnNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SabPaisaTxId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="issuerRefNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="authIdCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="clientTxnId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="lastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="payMode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="spRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="bid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="clientCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="payeeProfile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="transDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="spRespStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="m3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="challanNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="reMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="orgTxnAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="programId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="midName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Add" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="param1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="param2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="param3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="param4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf16" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf17" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf18" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf19" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="udf20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_Student_Subject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Seat_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="Case_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Head" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Sub_Code" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Actual_Marks" Type="Int32" />
+          <Property Name="Update_Marks" Type="Int32" />
+          <Property Name="Active" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tbl_Student_Subject_1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Seat_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="Case_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Head" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Sub_Code" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Actual_Marks" Type="Int32" />
+          <Property Name="Update_Marks" Type="Int32" />
+          <Property Name="Active" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="HSC_Verification_2022Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tbl_Daily_Verify" EntityType="Self.Tbl_Daily_Verify" />
+          <EntitySet Name="Tbl_Daily_Verify_Complete" EntityType="Self.Tbl_Daily_Verify_Complete" />
+          <EntitySet Name="Tbl_Migration" EntityType="Self.Tbl_Migration" />
+          <EntitySet Name="Tbl_Payment" EntityType="Self.Tbl_Payment" />
+          <EntitySet Name="Tbl_Verification" EntityType="Self.Tbl_Verification" />
+          <EntitySet Name="Tbl_Verification_1" EntityType="Self.Tbl_Verification_1" />
+          <EntitySet Name="Tbl_Verification_Pri" EntityType="Self.Tbl_Verification_Pri" />
+          <EntitySet Name="Tbl_Verification_Pri_1" EntityType="Self.Tbl_Verification_Pri_1" />
+          <EntitySet Name="Tbl_College_Email" EntityType="Self.Tbl_College_Email" />
+          <EntitySet Name="Tbl_Div_Details" EntityType="Self.Tbl_Div_Details" />
+          <EntitySet Name="Tbl_Division_Block" EntityType="Self.Tbl_Division_Block" />
+          <EntitySet Name="Tbl_Migration_Pri" EntityType="Self.Tbl_Migration_Pri" />
+          <EntitySet Name="Tbl_Payment_1" EntityType="Self.Tbl_Payment_1" />
+          <EntitySet Name="Tbl_Payment_Error" EntityType="Self.Tbl_Payment_Error" />
+          <EntitySet Name="Tbl_Student_Subject" EntityType="Self.Tbl_Student_Subject" />
+          <EntitySet Name="Tbl_Student_Subject_1" EntityType="Self.Tbl_Student_Subject_1" />
+          <FunctionImport Name="SP_GET_STUD_MARKSHEET">
+            <Parameter Name="Seat_No" Mode="In" Type="String" />
+            <Parameter Name="Div_Code" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_INSERT_PENDING_SUBJECT">
+            <Parameter Name="ACTION" Mode="In" Type="String" />
+            <Parameter Name="Seat_No" Mode="In" Type="String" />
+            <Parameter Name="Div_code" Mode="In" Type="Int32" />
+            <Parameter Name="Payment_Head" Mode="In" Type="Int32" />
+            <Parameter Name="Unique_ID_Payment" Mode="In" Type="String" />
+            <Parameter Name="Unique_ID_Seat_No" Mode="In" Type="String" />
+            <Parameter Name="Case_No" Mode="In" Type="String" />
+            <Parameter Name="Pre_Ref_ID" Mode="In" Type="Int32" />
+            <Parameter Name="RESULT" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_INSERT_STUDENT_DATA">
+            <Parameter Name="ACTION" Mode="In" Type="String" />
+            <Parameter Name="Seat_No" Mode="In" Type="String" />
+            <Parameter Name="Div_code" Mode="In" Type="Int32" />
+            <Parameter Name="Payment_Head" Mode="In" Type="Int32" />
+            <Parameter Name="Unique_ID_Payment" Mode="In" Type="String" />
+            <Parameter Name="Unique_ID_Seat_No" Mode="In" Type="String" />
+            <Parameter Name="Pre_Ref_ID" Mode="In" Type="Int32" />
+            <Parameter Name="RESULT" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_INSERT_STUDENT_DATA_PRI" ReturnType="Collection(HSC_Verification_2022Model.SP_INSERT_STUDENT_DATA_PRI_Result)">
+            <Parameter Name="ACTION" Mode="In" Type="String" />
+            <Parameter Name="Seat_No" Mode="In" Type="String" />
+            <Parameter Name="Payment_Head" Mode="In" Type="Int32" />
+            <Parameter Name="Div_Code" Mode="In" Type="Int32" />
+            <Parameter Name="Address" Mode="In" Type="String" />
+            <Parameter Name="Taluka" Mode="In" Type="String" />
+            <Parameter Name="District" Mode="In" Type="String" />
+            <Parameter Name="Pincode" Mode="In" Type="String" />
+            <Parameter Name="Mobile_No" Mode="In" Type="String" />
+            <Parameter Name="Email_ID" Mode="In" Type="String" />
+            <Parameter Name="Delivery_Mode" Mode="In" Type="String" />
+            <Parameter Name="Charge" Mode="In" Type="Double" />
+            <Parameter Name="Total_Payment" Mode="In" Type="Double" />
+            <Parameter Name="SUB1" Mode="In" Type="String" />
+            <Parameter Name="SUB2" Mode="In" Type="String" />
+            <Parameter Name="SUB3" Mode="In" Type="String" />
+            <Parameter Name="SUB4" Mode="In" Type="String" />
+            <Parameter Name="SUB5" Mode="In" Type="String" />
+            <Parameter Name="SUB6" Mode="In" Type="String" />
+            <Parameter Name="SUB7" Mode="In" Type="String" />
+            <Parameter Name="Unique_ID_Payment" Mode="In" Type="String" />
+            <Parameter Name="Unique_ID_Seat_No" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_INSERT_STUDENT_MIGRATION">
+            <Parameter Name="ACTION" Mode="In" Type="String" />
+            <Parameter Name="Seat_No" Mode="In" Type="String" />
+            <Parameter Name="Div_Code" Mode="In" Type="Int32" />
+            <Parameter Name="Unique_ID_Payment" Mode="In" Type="String" />
+            <Parameter Name="Unique_ID_Seat_No" Mode="In" Type="String" />
+            <Parameter Name="Pre_Ref_ID" Mode="In" Type="Int32" />
+            <Parameter Name="Result" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_INSERT_STUDENT_MIGRATION_PRI">
+            <Parameter Name="ACTION" Mode="In" Type="String" />
+            <Parameter Name="Surname" Mode="In" Type="String" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Father_Name" Mode="In" Type="String" />
+            <Parameter Name="Mother_Name" Mode="In" Type="String" />
+            <Parameter Name="Address" Mode="In" Type="String" />
+            <Parameter Name="Mobile_No1" Mode="In" Type="String" />
+            <Parameter Name="Mobile_No2" Mode="In" Type="String" />
+            <Parameter Name="Seat_No" Mode="In" Type="String" />
+            <Parameter Name="Exam" Mode="In" Type="String" />
+            <Parameter Name="Year" Mode="In" Type="String" />
+            <Parameter Name="Marks" Mode="In" Type="String" />
+            <Parameter Name="Percentage" Mode="In" Type="String" />
+            <Parameter Name="Center_No" Mode="In" Type="String" />
+            <Parameter Name="Center_Name" Mode="In" Type="String" />
+            <Parameter Name="Index_No" Mode="In" Type="String" />
+            <Parameter Name="School_Name" Mode="In" Type="String" />
+            <Parameter Name="Copy_Status" Mode="In" Type="String" />
+            <Parameter Name="Amount" Mode="In" Type="Int32" />
+            <Parameter Name="Div_Code" Mode="In" Type="Int32" />
+            <Parameter Name="Unique_ID_Payment" Mode="In" Type="String" />
+            <Parameter Name="Unique_ID_Seat_No" Mode="In" Type="String" />
+            <Parameter Name="Email_ID" Mode="In" Type="String" />
+            <Parameter Name="Delivery_Mode" Mode="In" Type="String" />
+            <Parameter Name="Result" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_INSERT_STUDENT_MIGRATION_TRANSFER">
+            <Parameter Name="ACTION" Mode="In" Type="String" />
+            <Parameter Name="Seat_No" Mode="In" Type="String" />
+            <Parameter Name="Div_Code" Mode="In" Type="Int32" />
+            <Parameter Name="Unique_ID_Payment" Mode="In" Type="String" />
+            <Parameter Name="Unique_ID_Seat_No" Mode="In" Type="String" />
+            <Parameter Name="Pre_Ref_ID" Mode="In" Type="Int32" />
+            <Parameter Name="Result" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Sp_Payment_Entry">
+            <Parameter Name="clientTxnId" Mode="In" Type="String" />
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="spRespStatus" Mode="In" Type="String" />
+            <Parameter Name="udf17" Mode="In" Type="String" />
+            <Parameter Name="udf18" Mode="In" Type="String" />
+            <Parameter Name="udf20" Mode="In" Type="String" />
+            <Parameter Name="udf19" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Fun_Sp_HSC_Payment_Entry" EntitySet="Tbl_Payment" ReturnType="Collection(HSC_Verification_2022Model.Tbl_Payment)">
+            <Parameter Name="clientTxnId" Mode="In" Type="String" />
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="spRespStatus" Mode="In" Type="String" />
+            <Parameter Name="udf17" Mode="In" Type="String" />
+            <Parameter Name="udf18" Mode="In" Type="String" />
+            <Parameter Name="udf20" Mode="In" Type="String" />
+            <Parameter Name="udf19" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="SP_INSERT_STUDENT_DATA_PRI_Result">
+          <Property Type="String" Name="SEAT" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="SCH" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="NAME" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="DIV" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="RID" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HSC_Verification_2022ModelStoreContainer" CdmEntityContainer="HSC_Verification_2022Entities1">
+          <EntitySetMapping Name="Tbl_Daily_Verify">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Daily_Verify">
+              <MappingFragment StoreEntitySet="Tbl_Daily_Verify">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+                <ScalarProperty Name="UNIQUE_ID_PAYMENT" ColumnName="UNIQUE_ID_PAYMENT" />
+                <ScalarProperty Name="Payment_Status" ColumnName="Payment_Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Daily_Verify_Complete">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Daily_Verify_Complete">
+              <MappingFragment StoreEntitySet="Tbl_Daily_Verify_Complete">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+                <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Migration">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Migration">
+              <MappingFragment StoreEntitySet="Tbl_Migration">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+                <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile_No1" ColumnName="Mobile_No1" />
+                <ScalarProperty Name="Mobile_No2" ColumnName="Mobile_No2" />
+                <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+                <ScalarProperty Name="Exam" ColumnName="Exam" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Marks" ColumnName="Marks" />
+                <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+                <ScalarProperty Name="Center_No" ColumnName="Center_No" />
+                <ScalarProperty Name="Center_Name" ColumnName="Center_Name" />
+                <ScalarProperty Name="Index_No" ColumnName="Index_No" />
+                <ScalarProperty Name="School_Name" ColumnName="School_Name" />
+                <ScalarProperty Name="Copy_Status" ColumnName="Copy_Status" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Unique_ID_Payment" ColumnName="Unique_ID_Payment" />
+                <ScalarProperty Name="Unique_ID_Seat_No" ColumnName="Unique_ID_Seat_No" />
+                <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+                <ScalarProperty Name="Pre_Ref_ID" ColumnName="Pre_Ref_ID" />
+                <ScalarProperty Name="OnDateTime" ColumnName="OnDateTime" />
+                <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+                <ScalarProperty Name="Delivery_Mode" ColumnName="Delivery_Mode" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Responce" ColumnName="Responce" />
+                <ScalarProperty Name="Reply_DateTime" ColumnName="Reply_DateTime" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Payment">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Payment">
+              <MappingFragment StoreEntitySet="Tbl_Payment">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="pgRespCode" ColumnName="pgRespCode" />
+                <ScalarProperty Name="PGTxnNo" ColumnName="PGTxnNo" />
+                <ScalarProperty Name="SabPaisaTxId" ColumnName="SabPaisaTxId" />
+                <ScalarProperty Name="issuerRefNo" ColumnName="issuerRefNo" />
+                <ScalarProperty Name="authIdCode" ColumnName="authIdCode" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="clientTxnId" ColumnName="clientTxnId" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="payMode" ColumnName="payMode" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobileNo" ColumnName="mobileNo" />
+                <ScalarProperty Name="spRespCode" ColumnName="spRespCode" />
+                <ScalarProperty Name="cid" ColumnName="cid" />
+                <ScalarProperty Name="bid" ColumnName="bid" />
+                <ScalarProperty Name="clientCode" ColumnName="clientCode" />
+                <ScalarProperty Name="payeeProfile" ColumnName="payeeProfile" />
+                <ScalarProperty Name="transDate" ColumnName="transDate" />
+                <ScalarProperty Name="spRespStatus" ColumnName="spRespStatus" />
+                <ScalarProperty Name="m3" ColumnName="m3" />
+                <ScalarProperty Name="challanNo" ColumnName="challanNo" />
+                <ScalarProperty Name="reMsg" ColumnName="reMsg" />
+                <ScalarProperty Name="orgTxnAmount" ColumnName="orgTxnAmount" />
+                <ScalarProperty Name="programId" ColumnName="programId" />
+                <ScalarProperty Name="midName" ColumnName="midName" />
+                <ScalarProperty Name="Add" ColumnName="Add" />
+                <ScalarProperty Name="param1" ColumnName="param1" />
+                <ScalarProperty Name="param2" ColumnName="param2" />
+                <ScalarProperty Name="param3" ColumnName="param3" />
+                <ScalarProperty Name="param4" ColumnName="param4" />
+                <ScalarProperty Name="udf5" ColumnName="udf5" />
+                <ScalarProperty Name="udf6" ColumnName="udf6" />
+                <ScalarProperty Name="udf7" ColumnName="udf7" />
+                <ScalarProperty Name="udf8" ColumnName="udf8" />
+                <ScalarProperty Name="udf9" ColumnName="udf9" />
+                <ScalarProperty Name="udf10" ColumnName="udf10" />
+                <ScalarProperty Name="udf11" ColumnName="udf11" />
+                <ScalarProperty Name="udf12" ColumnName="udf12" />
+                <ScalarProperty Name="udf13" ColumnName="udf13" />
+                <ScalarProperty Name="udf14" ColumnName="udf14" />
+                <ScalarProperty Name="udf15" ColumnName="udf15" />
+                <ScalarProperty Name="udf16" ColumnName="udf16" />
+                <ScalarProperty Name="udf17" ColumnName="udf17" />
+                <ScalarProperty Name="udf18" ColumnName="udf18" />
+                <ScalarProperty Name="udf19" ColumnName="udf19" />
+                <ScalarProperty Name="udf20" ColumnName="udf20" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Verification">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Verification">
+              <MappingFragment StoreEntitySet="Tbl_Verification">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+                <ScalarProperty Name="Payment_Head" ColumnName="Payment_Head" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+                <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+                <ScalarProperty Name="Delivery_Mode" ColumnName="Delivery_Mode" />
+                <ScalarProperty Name="Charge" ColumnName="Charge" />
+                <ScalarProperty Name="Total_Payment" ColumnName="Total_Payment" />
+                <ScalarProperty Name="SUB1" ColumnName="SUB1" />
+                <ScalarProperty Name="SUB2" ColumnName="SUB2" />
+                <ScalarProperty Name="SUB3" ColumnName="SUB3" />
+                <ScalarProperty Name="SUB4" ColumnName="SUB4" />
+                <ScalarProperty Name="SUB5" ColumnName="SUB5" />
+                <ScalarProperty Name="SUB6" ColumnName="SUB6" />
+                <ScalarProperty Name="SUB7" ColumnName="SUB7" />
+                <ScalarProperty Name="Unique_ID_Payment" ColumnName="Unique_ID_Payment" />
+                <ScalarProperty Name="Unique_ID_Seat_No" ColumnName="Unique_ID_Seat_No" />
+                <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+                <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Responce" ColumnName="Responce" />
+                <ScalarProperty Name="Reply_DateTime" ColumnName="Reply_DateTime" />
+                <ScalarProperty Name="Pre_Ref_ID" ColumnName="Pre_Ref_ID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Verification_1">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Verification_1">
+              <MappingFragment StoreEntitySet="Tbl_Verification_1">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+                <ScalarProperty Name="Payment_Head" ColumnName="Payment_Head" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+                <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+                <ScalarProperty Name="Delivery_Mode" ColumnName="Delivery_Mode" />
+                <ScalarProperty Name="Charge" ColumnName="Charge" />
+                <ScalarProperty Name="Total_Payment" ColumnName="Total_Payment" />
+                <ScalarProperty Name="SUB1" ColumnName="SUB1" />
+                <ScalarProperty Name="SUB2" ColumnName="SUB2" />
+                <ScalarProperty Name="SUB3" ColumnName="SUB3" />
+                <ScalarProperty Name="SUB4" ColumnName="SUB4" />
+                <ScalarProperty Name="SUB5" ColumnName="SUB5" />
+                <ScalarProperty Name="SUB6" ColumnName="SUB6" />
+                <ScalarProperty Name="SUB7" ColumnName="SUB7" />
+                <ScalarProperty Name="Unique_ID_Payment" ColumnName="Unique_ID_Payment" />
+                <ScalarProperty Name="Unique_ID_Seat_No" ColumnName="Unique_ID_Seat_No" />
+                <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+                <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Responce" ColumnName="Responce" />
+                <ScalarProperty Name="Reply_DateTime" ColumnName="Reply_DateTime" />
+                <ScalarProperty Name="Pre_Ref_ID" ColumnName="Pre_Ref_ID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Verification_Pri">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Verification_Pri">
+              <MappingFragment StoreEntitySet="Tbl_Verification_Pri">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+                <ScalarProperty Name="Payment_Head" ColumnName="Payment_Head" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+                <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+                <ScalarProperty Name="Delivery_Mode" ColumnName="Delivery_Mode" />
+                <ScalarProperty Name="Charge" ColumnName="Charge" />
+                <ScalarProperty Name="Total_Payment" ColumnName="Total_Payment" />
+                <ScalarProperty Name="SUB1" ColumnName="SUB1" />
+                <ScalarProperty Name="SUB2" ColumnName="SUB2" />
+                <ScalarProperty Name="SUB3" ColumnName="SUB3" />
+                <ScalarProperty Name="SUB4" ColumnName="SUB4" />
+                <ScalarProperty Name="SUB5" ColumnName="SUB5" />
+                <ScalarProperty Name="SUB6" ColumnName="SUB6" />
+                <ScalarProperty Name="SUB7" ColumnName="SUB7" />
+                <ScalarProperty Name="Unique_ID_Payment" ColumnName="Unique_ID_Payment" />
+                <ScalarProperty Name="Unique_ID_Seat_No" ColumnName="Unique_ID_Seat_No" />
+                <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+                <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Responce" ColumnName="Responce" />
+                <ScalarProperty Name="Reply_DateTime" ColumnName="Reply_DateTime" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Verification_Pri_1">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Verification_Pri_1">
+              <MappingFragment StoreEntitySet="Tbl_Verification_Pri_1">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+                <ScalarProperty Name="Payment_Head" ColumnName="Payment_Head" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+                <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+                <ScalarProperty Name="Delivery_Mode" ColumnName="Delivery_Mode" />
+                <ScalarProperty Name="Charge" ColumnName="Charge" />
+                <ScalarProperty Name="Total_Payment" ColumnName="Total_Payment" />
+                <ScalarProperty Name="SUB1" ColumnName="SUB1" />
+                <ScalarProperty Name="SUB2" ColumnName="SUB2" />
+                <ScalarProperty Name="SUB3" ColumnName="SUB3" />
+                <ScalarProperty Name="SUB4" ColumnName="SUB4" />
+                <ScalarProperty Name="SUB5" ColumnName="SUB5" />
+                <ScalarProperty Name="SUB6" ColumnName="SUB6" />
+                <ScalarProperty Name="SUB7" ColumnName="SUB7" />
+                <ScalarProperty Name="Unique_ID_Payment" ColumnName="Unique_ID_Payment" />
+                <ScalarProperty Name="Unique_ID_Seat_No" ColumnName="Unique_ID_Seat_No" />
+                <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+                <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Responce" ColumnName="Responce" />
+                <ScalarProperty Name="Reply_DateTime" ColumnName="Reply_DateTime" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_College_Email">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_College_Email">
+              <MappingFragment StoreEntitySet="Tbl_College_Email">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+                <ScalarProperty Name="College_Email" ColumnName="College_Email" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Div_Details">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Div_Details">
+              <MappingFragment StoreEntitySet="Tbl_Div_Details">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DIV_Initial" ColumnName="DIV_Initial" />
+                <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+                <ScalarProperty Name="Div_Name" ColumnName="Div_Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Division_Block">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Division_Block">
+              <MappingFragment StoreEntitySet="Tbl_Division_Block">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Division_ID" ColumnName="Division_ID" />
+                <ScalarProperty Name="Payment_Head" ColumnName="Payment_Head" />
+                <ScalarProperty Name="BDate" ColumnName="BDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Migration_Pri">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Migration_Pri">
+              <MappingFragment StoreEntitySet="Tbl_Migration_Pri">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+                <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile_No1" ColumnName="Mobile_No1" />
+                <ScalarProperty Name="Mobile_No2" ColumnName="Mobile_No2" />
+                <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+                <ScalarProperty Name="Exam" ColumnName="Exam" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Marks" ColumnName="Marks" />
+                <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+                <ScalarProperty Name="Center_No" ColumnName="Center_No" />
+                <ScalarProperty Name="Center_Name" ColumnName="Center_Name" />
+                <ScalarProperty Name="Index_No" ColumnName="Index_No" />
+                <ScalarProperty Name="School_Name" ColumnName="School_Name" />
+                <ScalarProperty Name="Copy_Status" ColumnName="Copy_Status" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Unique_ID_Payment" ColumnName="Unique_ID_Payment" />
+                <ScalarProperty Name="Unique_ID_Seat_No" ColumnName="Unique_ID_Seat_No" />
+                <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+                <ScalarProperty Name="OnDateTime" ColumnName="OnDateTime" />
+                <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+                <ScalarProperty Name="Delivery_Mode" ColumnName="Delivery_Mode" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Payment_1">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Payment_1">
+              <MappingFragment StoreEntitySet="Tbl_Payment_1">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="pgRespCode" ColumnName="pgRespCode" />
+                <ScalarProperty Name="PGTxnNo" ColumnName="PGTxnNo" />
+                <ScalarProperty Name="SabPaisaTxId" ColumnName="SabPaisaTxId" />
+                <ScalarProperty Name="issuerRefNo" ColumnName="issuerRefNo" />
+                <ScalarProperty Name="authIdCode" ColumnName="authIdCode" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="clientTxnId" ColumnName="clientTxnId" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="payMode" ColumnName="payMode" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobileNo" ColumnName="mobileNo" />
+                <ScalarProperty Name="spRespCode" ColumnName="spRespCode" />
+                <ScalarProperty Name="cid" ColumnName="cid" />
+                <ScalarProperty Name="bid" ColumnName="bid" />
+                <ScalarProperty Name="clientCode" ColumnName="clientCode" />
+                <ScalarProperty Name="payeeProfile" ColumnName="payeeProfile" />
+                <ScalarProperty Name="transDate" ColumnName="transDate" />
+                <ScalarProperty Name="spRespStatus" ColumnName="spRespStatus" />
+                <ScalarProperty Name="m3" ColumnName="m3" />
+                <ScalarProperty Name="challanNo" ColumnName="challanNo" />
+                <ScalarProperty Name="reMsg" ColumnName="reMsg" />
+                <ScalarProperty Name="orgTxnAmount" ColumnName="orgTxnAmount" />
+                <ScalarProperty Name="programId" ColumnName="programId" />
+                <ScalarProperty Name="midName" ColumnName="midName" />
+                <ScalarProperty Name="Add" ColumnName="Add" />
+                <ScalarProperty Name="param1" ColumnName="param1" />
+                <ScalarProperty Name="param2" ColumnName="param2" />
+                <ScalarProperty Name="param3" ColumnName="param3" />
+                <ScalarProperty Name="param4" ColumnName="param4" />
+                <ScalarProperty Name="udf5" ColumnName="udf5" />
+                <ScalarProperty Name="udf6" ColumnName="udf6" />
+                <ScalarProperty Name="udf7" ColumnName="udf7" />
+                <ScalarProperty Name="udf8" ColumnName="udf8" />
+                <ScalarProperty Name="udf9" ColumnName="udf9" />
+                <ScalarProperty Name="udf10" ColumnName="udf10" />
+                <ScalarProperty Name="udf11" ColumnName="udf11" />
+                <ScalarProperty Name="udf12" ColumnName="udf12" />
+                <ScalarProperty Name="udf13" ColumnName="udf13" />
+                <ScalarProperty Name="udf14" ColumnName="udf14" />
+                <ScalarProperty Name="udf15" ColumnName="udf15" />
+                <ScalarProperty Name="udf16" ColumnName="udf16" />
+                <ScalarProperty Name="udf17" ColumnName="udf17" />
+                <ScalarProperty Name="udf18" ColumnName="udf18" />
+                <ScalarProperty Name="udf19" ColumnName="udf19" />
+                <ScalarProperty Name="udf20" ColumnName="udf20" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Payment_Error">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Payment_Error">
+              <MappingFragment StoreEntitySet="Tbl_Payment_Error">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="pgRespCode" ColumnName="pgRespCode" />
+                <ScalarProperty Name="PGTxnNo" ColumnName="PGTxnNo" />
+                <ScalarProperty Name="SabPaisaTxId" ColumnName="SabPaisaTxId" />
+                <ScalarProperty Name="issuerRefNo" ColumnName="issuerRefNo" />
+                <ScalarProperty Name="authIdCode" ColumnName="authIdCode" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="clientTxnId" ColumnName="clientTxnId" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="payMode" ColumnName="payMode" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobileNo" ColumnName="mobileNo" />
+                <ScalarProperty Name="spRespCode" ColumnName="spRespCode" />
+                <ScalarProperty Name="cid" ColumnName="cid" />
+                <ScalarProperty Name="bid" ColumnName="bid" />
+                <ScalarProperty Name="clientCode" ColumnName="clientCode" />
+                <ScalarProperty Name="payeeProfile" ColumnName="payeeProfile" />
+                <ScalarProperty Name="transDate" ColumnName="transDate" />
+                <ScalarProperty Name="spRespStatus" ColumnName="spRespStatus" />
+                <ScalarProperty Name="m3" ColumnName="m3" />
+                <ScalarProperty Name="challanNo" ColumnName="challanNo" />
+                <ScalarProperty Name="reMsg" ColumnName="reMsg" />
+                <ScalarProperty Name="orgTxnAmount" ColumnName="orgTxnAmount" />
+                <ScalarProperty Name="programId" ColumnName="programId" />
+                <ScalarProperty Name="midName" ColumnName="midName" />
+                <ScalarProperty Name="Add" ColumnName="Add" />
+                <ScalarProperty Name="param1" ColumnName="param1" />
+                <ScalarProperty Name="param2" ColumnName="param2" />
+                <ScalarProperty Name="param3" ColumnName="param3" />
+                <ScalarProperty Name="param4" ColumnName="param4" />
+                <ScalarProperty Name="udf5" ColumnName="udf5" />
+                <ScalarProperty Name="udf6" ColumnName="udf6" />
+                <ScalarProperty Name="udf7" ColumnName="udf7" />
+                <ScalarProperty Name="udf8" ColumnName="udf8" />
+                <ScalarProperty Name="udf9" ColumnName="udf9" />
+                <ScalarProperty Name="udf10" ColumnName="udf10" />
+                <ScalarProperty Name="udf11" ColumnName="udf11" />
+                <ScalarProperty Name="udf12" ColumnName="udf12" />
+                <ScalarProperty Name="udf13" ColumnName="udf13" />
+                <ScalarProperty Name="udf14" ColumnName="udf14" />
+                <ScalarProperty Name="udf15" ColumnName="udf15" />
+                <ScalarProperty Name="udf16" ColumnName="udf16" />
+                <ScalarProperty Name="udf17" ColumnName="udf17" />
+                <ScalarProperty Name="udf18" ColumnName="udf18" />
+                <ScalarProperty Name="udf19" ColumnName="udf19" />
+                <ScalarProperty Name="udf20" ColumnName="udf20" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Student_Subject">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Student_Subject">
+              <MappingFragment StoreEntitySet="Tbl_Student_Subject">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+                <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+                <ScalarProperty Name="Head" ColumnName="Head" />
+                <ScalarProperty Name="Sub_Code" ColumnName="Sub_Code" />
+                <ScalarProperty Name="Actual_Marks" ColumnName="Actual_Marks" />
+                <ScalarProperty Name="Update_Marks" ColumnName="Update_Marks" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Student_Subject_1">
+            <EntityTypeMapping TypeName="HSC_Verification_2022Model.Tbl_Student_Subject_1">
+              <MappingFragment StoreEntitySet="Tbl_Student_Subject_1">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+                <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+                <ScalarProperty Name="Head" ColumnName="Head" />
+                <ScalarProperty Name="Sub_Code" ColumnName="Sub_Code" />
+                <ScalarProperty Name="Actual_Marks" ColumnName="Actual_Marks" />
+                <ScalarProperty Name="Update_Marks" ColumnName="Update_Marks" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_GET_STUD_MARKSHEET" FunctionName="HSC_Verification_2022Model.Store.SP_GET_STUD_MARKSHEET" />
+          <FunctionImportMapping FunctionImportName="SP_INSERT_PENDING_SUBJECT" FunctionName="HSC_Verification_2022Model.Store.SP_INSERT_PENDING_SUBJECT" />
+          <FunctionImportMapping FunctionImportName="SP_INSERT_STUDENT_DATA" FunctionName="HSC_Verification_2022Model.Store.SP_INSERT_STUDENT_DATA" />
+          <FunctionImportMapping FunctionImportName="SP_INSERT_STUDENT_DATA_PRI" FunctionName="HSC_Verification_2022Model.Store.SP_INSERT_STUDENT_DATA_PRI">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HSC_Verification_2022Model.SP_INSERT_STUDENT_DATA_PRI_Result">
+                <ScalarProperty Name="SEAT" ColumnName="SEAT" />
+                <ScalarProperty Name="SCH" ColumnName="SCH" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DIV" ColumnName="DIV" />
+                <ScalarProperty Name="RID" ColumnName="RID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_INSERT_STUDENT_MIGRATION" FunctionName="HSC_Verification_2022Model.Store.SP_INSERT_STUDENT_MIGRATION" />
+          <FunctionImportMapping FunctionImportName="SP_INSERT_STUDENT_MIGRATION_PRI" FunctionName="HSC_Verification_2022Model.Store.SP_INSERT_STUDENT_MIGRATION_PRI" />
+          <FunctionImportMapping FunctionImportName="SP_INSERT_STUDENT_MIGRATION_TRANSFER" FunctionName="HSC_Verification_2022Model.Store.SP_INSERT_STUDENT_MIGRATION_TRANSFER" />
+          <FunctionImportMapping FunctionImportName="Sp_Payment_Entry" FunctionName="HSC_Verification_2022Model.Store.Sp_Payment_Entry" />
+          <FunctionImportMapping FunctionImportName="Fun_Sp_HSC_Payment_Entry" FunctionName="HSC_Verification_2022Model.Store.Sp_Payment_Entry" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

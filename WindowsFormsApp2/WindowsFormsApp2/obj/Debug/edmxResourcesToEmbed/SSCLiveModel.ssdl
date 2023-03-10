@@ -1,0 +1,1333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SSC_Verification_2022Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sqlmapoutput">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data" Type="nvarchar" MaxLength="4000" />
+  </EntityType>
+  <EntityType Name="SSCDATA">
+    <Key>
+      <PropertyRef Name="SEAT" />
+    </Key>
+    <Property Name="DIV" Type="nvarchar" MaxLength="255" />
+    <Property Name="SCH" Type="nvarchar" MaxLength="255" />
+    <Property Name="SEAT" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB1" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK1" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB2" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK2" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB3" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK3" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB4" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK4" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB5" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK5" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB6" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK6" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB7" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK7" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB8" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK8" Type="nvarchar" MaxLength="255" />
+    <Property Name="TOTAL" Type="nvarchar" MaxLength="255" />
+    <Property Name="OUTOF" Type="nvarchar" MaxLength="255" />
+    <Property Name="SIGN" Type="nvarchar" MaxLength="255" />
+    <Property Name="GRACE" Type="nvarchar" MaxLength="255" />
+    <Property Name="COURSE" Type="nvarchar" MaxLength="255" />
+    <Property Name="MOTHER" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SSCDATA_1">
+    <Key>
+      <PropertyRef Name="SEAT" />
+    </Key>
+    <Property Name="DIV" Type="nvarchar" MaxLength="255" />
+    <Property Name="SCH" Type="nvarchar" MaxLength="255" />
+    <Property Name="SEAT" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB1" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK1" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB2" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK2" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB3" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK3" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB4" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK4" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB5" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK5" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB6" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK6" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB7" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK7" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUB8" Type="nvarchar" MaxLength="255" />
+    <Property Name="MARK8" Type="nvarchar" MaxLength="255" />
+    <Property Name="TOTAL" Type="nvarchar" MaxLength="255" />
+    <Property Name="OUTOF" Type="nvarchar" MaxLength="255" />
+    <Property Name="SIGN" Type="nvarchar" MaxLength="255" />
+    <Property Name="GRACE" Type="nvarchar" MaxLength="255" />
+    <Property Name="COURSE" Type="nvarchar" MaxLength="255" />
+    <Property Name="MOTHER" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SSC_Verification_2022.dbo.SSCSUBJ' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SSCSUBJ">
+          <Property Name="SUBCODE" Type="nvarchar" MaxLength="255" />
+          <Property Name="SUBNAME" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SSC_Verification_2022.dbo.SUID' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SUID">
+          <Property Name="DIV" Type="nvarchar" MaxLength="255" />
+          <Property Name="SEAT" Type="nvarchar" MaxLength="255" />
+          <Property Name="SUB" Type="nvarchar" MaxLength="255" />
+          <Property Name="PAP" Type="nvarchar" MaxLength="255" />
+          <Property Name="UID" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SSC_Verification_2022.dbo.SUID_1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SUID_1">
+          <Property Name="DIV" Type="nvarchar" MaxLength="255" />
+          <Property Name="SEAT" Type="nvarchar" MaxLength="255" />
+          <Property Name="SUB" Type="nvarchar" MaxLength="255" />
+          <Property Name="PAP" Type="nvarchar" MaxLength="255" />
+          <Property Name="UID" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SSC_Verification_2022.dbo.Tbl_College_Email' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tbl_College_Email">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Case_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="College_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Active" Type="int" />
+  </EntityType>
+  <EntityType Name="Tbl_Daily_Verify">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Seat_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="UNIQUE_ID_PAYMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="Payment_Status" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Daily_Verify_Complete">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Seat_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Case_No" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SSC_Verification_2022.dbo.Tbl_Div_Details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tbl_Div_Details">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DIV_Initial" Type="nvarchar" MaxLength="50" />
+    <Property Name="Div_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Div_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SSC_Verification_2022.dbo.Tbl_Division_Block' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tbl_Division_Block">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Division_ID" Type="int" />
+    <Property Name="Payment_Head" Type="int" />
+    <Property Name="BDate" Type="date" />
+  </EntityType>
+  <EntityType Name="Tbl_Migration">
+    <Key>
+      <PropertyRef Name="Unique_ID_Payment" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Case_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Surname" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Father_Name" Type="nvarchar(max)" />
+    <Property Name="Mother_Name" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Mobile_No1" Type="nvarchar(max)" />
+    <Property Name="Mobile_No2" Type="nvarchar(max)" />
+    <Property Name="Seat_No" Type="nvarchar(max)" />
+    <Property Name="Exam" Type="nvarchar(max)" />
+    <Property Name="Year" Type="nvarchar(max)" />
+    <Property Name="Marks" Type="nvarchar(max)" />
+    <Property Name="Percentage" Type="nvarchar(max)" />
+    <Property Name="Center_No" Type="nvarchar(max)" />
+    <Property Name="Center_Name" Type="nvarchar(max)" />
+    <Property Name="Index_No" Type="nvarchar(max)" />
+    <Property Name="School_Name" Type="nvarchar(max)" />
+    <Property Name="Copy_Status" Type="nvarchar(max)" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Unique_ID_Payment" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Unique_ID_Seat_No" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Div_Code" Type="int" />
+    <Property Name="Pre_Ref_ID" Type="int" />
+    <Property Name="OnDateTime" Type="datetime" />
+    <Property Name="Email_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delivery_Mode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Responce" Type="nvarchar(max)" />
+    <Property Name="Reply_DateTime" Type="datetime" />
+    <Property Name="Active" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SSC_Verification_2022.dbo.Tbl_Migration_Pri' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tbl_Migration_Pri">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Unique_ID_Seat_No" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Father_Name" Type="nvarchar(max)" />
+    <Property Name="Mother_Name" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Mobile_No1" Type="nvarchar(max)" />
+    <Property Name="Mobile_No2" Type="nvarchar(max)" />
+    <Property Name="Seat_No" Type="nvarchar(max)" />
+    <Property Name="Exam" Type="nvarchar(max)" />
+    <Property Name="Year" Type="nvarchar(max)" />
+    <Property Name="Marks" Type="nvarchar(max)" />
+    <Property Name="Percentage" Type="nvarchar(max)" />
+    <Property Name="Center_No" Type="nvarchar(max)" />
+    <Property Name="Center_Name" Type="nvarchar(max)" />
+    <Property Name="Index_No" Type="nvarchar(max)" />
+    <Property Name="School_Name" Type="nvarchar(max)" />
+    <Property Name="Copy_Status" Type="nvarchar(max)" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Unique_ID_Payment" Type="nvarchar(max)" />
+    <Property Name="Unique_ID_Seat_No" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Div_Code" Type="int" />
+    <Property Name="OnDateTime" Type="datetime" />
+    <Property Name="Email_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delivery_Mode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Active" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SSC_Verification_2022.dbo.Tbl_OS_Register' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Tbl_OS_Register">
+          <Property Name="exam_code" Type="nvarchar" MaxLength="255" />
+          <Property Name="seat_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="schol_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="srno" Type="nvarchar" MaxLength="255" />
+          <Property Name="center" Type="nvarchar" MaxLength="255" />
+          <Property Name="sex_cd" Type="nvarchar" MaxLength="255" />
+          <Property Name="cast_cd" Type="nvarchar" MaxLength="255" />
+          <Property Name="ph_code" Type="nvarchar" MaxLength="255" />
+          <Property Name="medium" Type="nvarchar" MaxLength="255" />
+          <Property Name="fr_rpt_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="rg_pr_is" Type="nvarchar" MaxLength="255" />
+          <Property Name="exm_nexm" Type="nvarchar" MaxLength="255" />
+          <Property Name="tech" Type="nvarchar" MaxLength="255" />
+          <Property Name="fg" Type="nvarchar" MaxLength="255" />
+          <Property Name="bdate" Type="nvarchar" MaxLength="255" />
+          <Property Name="totsube" Type="nvarchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
+          <Property Name="mname" Type="nvarchar" MaxLength="255" />
+          <Property Name="eligno" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang1" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang1a" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang2" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang2a" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang3" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang3a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub41" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub42" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub4a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub5" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub5a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub6" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub6a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub7" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub7a" Type="nvarchar" MaxLength="255" />
+          <Property Name="op2orsg" Type="nvarchar" MaxLength="255" />
+          <Property Name="op2la" Type="nvarchar" MaxLength="255" />
+          <Property Name="op1la" Type="nvarchar" MaxLength="255" />
+          <Property Name="schsubj1" Type="nvarchar" MaxLength="255" />
+          <Property Name="schsubj2" Type="nvarchar" MaxLength="255" />
+          <Property Name="schsubj3" Type="nvarchar" MaxLength="255" />
+          <Property Name="l1w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l1o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l21w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l21o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l22w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l22o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l3w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l3o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l3i" Type="nvarchar" MaxLength="255" />
+          <Property Name="maths1" Type="nvarchar" MaxLength="255" />
+          <Property Name="maths2" Type="nvarchar" MaxLength="255" />
+          <Property Name="mathsi" Type="nvarchar" MaxLength="255" />
+          <Property Name="scithe1" Type="nvarchar" MaxLength="255" />
+          <Property Name="scithe2" Type="nvarchar" MaxLength="255" />
+          <Property Name="scipra1" Type="nvarchar" MaxLength="255" />
+          <Property Name="scipra2" Type="nvarchar" MaxLength="255" />
+          <Property Name="sosci1" Type="nvarchar" MaxLength="255" />
+          <Property Name="sosci2" Type="nvarchar" MaxLength="255" />
+          <Property Name="soscii" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp1mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp2mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp3mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp4mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="ict1" Type="nvarchar" MaxLength="255" />
+          <Property Name="ict2" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra1" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra2" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra3" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra4" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub1" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub2" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub3" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub4" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub5" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub6" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj1" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj2" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj3" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj4" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj5" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj6" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj7gr" Type="nvarchar" MaxLength="255" />
+          <Property Name="gtotal" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc" Type="nvarchar" MaxLength="255" />
+          <Property Name="passfail" Type="nvarchar" MaxLength="255" />
+          <Property Name="grades" Type="nvarchar" MaxLength="255" />
+          <Property Name="absenti" Type="nvarchar" MaxLength="255" />
+          <Property Name="seatold" Type="nvarchar" MaxLength="255" />
+          <Property Name="sesyr" Type="nvarchar" MaxLength="255" />
+          <Property Name="filler" Type="nvarchar" MaxLength="255" />
+          <Property Name="sport" Type="nvarchar" MaxLength="255" />
+          <Property Name="sportmark" Type="nvarchar" MaxLength="255" />
+          <Property Name="grace" Type="nvarchar" MaxLength="255" />
+          <Property Name="ind" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub1pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub2pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub3pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub4pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub5pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub6pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="subdrop" Type="nvarchar" MaxLength="255" />
+          <Property Name="outofmark" Type="nvarchar" MaxLength="255" />
+          <Property Name="tot500" Type="nvarchar" MaxLength="255" />
+          <Property Name="tot550" Type="nvarchar" MaxLength="255" />
+          <Property Name="tot650" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc500" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc550" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc650" Type="nvarchar" MaxLength="255" />
+          <Property Name="meritperc" Type="nvarchar" MaxLength="255" />
+          <Property Name="minority" Type="nvarchar" MaxLength="255" />
+          <Property Name="t818283" Type="nvarchar" MaxLength="255" />
+          <Property Name="art" Type="nvarchar" MaxLength="255" />
+          <Property Name="aadhar" Type="nvarchar" MaxLength="255" />
+          <Property Name="bplace" Type="nvarchar" MaxLength="255" />
+          <Property Name="div" Type="nvarchar" MaxLength="255" />
+          <Property Name="cata" Type="nvarchar" MaxLength="255" />
+          <Property Name="finalcata" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SSC_Verification_2022.dbo.Tbl_OS_Register_1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Tbl_OS_Register_1">
+          <Property Name="exam_code" Type="nvarchar" MaxLength="255" />
+          <Property Name="seat_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="schol_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="srno" Type="nvarchar" MaxLength="255" />
+          <Property Name="center" Type="nvarchar" MaxLength="255" />
+          <Property Name="sex_cd" Type="nvarchar" MaxLength="255" />
+          <Property Name="cast_cd" Type="nvarchar" MaxLength="255" />
+          <Property Name="ph_code" Type="nvarchar" MaxLength="255" />
+          <Property Name="medium" Type="nvarchar" MaxLength="255" />
+          <Property Name="fr_rpt_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="rg_pr_is" Type="nvarchar" MaxLength="255" />
+          <Property Name="exm_nexm" Type="nvarchar" MaxLength="255" />
+          <Property Name="tech" Type="nvarchar" MaxLength="255" />
+          <Property Name="fg" Type="nvarchar" MaxLength="255" />
+          <Property Name="bdate" Type="nvarchar" MaxLength="255" />
+          <Property Name="totsube" Type="nvarchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
+          <Property Name="mname" Type="nvarchar" MaxLength="255" />
+          <Property Name="eligno" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang1" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang1a" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang2" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang2a" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang3" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang3a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub41" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub42" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub4a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub5" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub5a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub6" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub6a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub7" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub7a" Type="nvarchar" MaxLength="255" />
+          <Property Name="op2orsg" Type="nvarchar" MaxLength="255" />
+          <Property Name="op2la" Type="nvarchar" MaxLength="255" />
+          <Property Name="op1la" Type="nvarchar" MaxLength="255" />
+          <Property Name="schsubj1" Type="nvarchar" MaxLength="255" />
+          <Property Name="schsubj2" Type="nvarchar" MaxLength="255" />
+          <Property Name="schsubj3" Type="nvarchar" MaxLength="255" />
+          <Property Name="l1w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l1o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l21w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l21o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l22w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l22o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l3w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l3o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l3i" Type="nvarchar" MaxLength="255" />
+          <Property Name="maths1" Type="nvarchar" MaxLength="255" />
+          <Property Name="maths2" Type="nvarchar" MaxLength="255" />
+          <Property Name="mathsi" Type="nvarchar" MaxLength="255" />
+          <Property Name="scithe1" Type="nvarchar" MaxLength="255" />
+          <Property Name="scithe2" Type="nvarchar" MaxLength="255" />
+          <Property Name="scipra1" Type="nvarchar" MaxLength="255" />
+          <Property Name="scipra2" Type="nvarchar" MaxLength="255" />
+          <Property Name="sosci1" Type="nvarchar" MaxLength="255" />
+          <Property Name="sosci2" Type="nvarchar" MaxLength="255" />
+          <Property Name="soscii" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp1mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp2mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp3mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp4mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="ict1" Type="nvarchar" MaxLength="255" />
+          <Property Name="ict2" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra1" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra2" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra3" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra4" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub1" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub2" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub3" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub4" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub5" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub6" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj1" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj2" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj3" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj4" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj5" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj6" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj7gr" Type="nvarchar" MaxLength="255" />
+          <Property Name="gtotal" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc" Type="nvarchar" MaxLength="255" />
+          <Property Name="passfail" Type="nvarchar" MaxLength="255" />
+          <Property Name="grades" Type="nvarchar" MaxLength="255" />
+          <Property Name="absenti" Type="nvarchar" MaxLength="255" />
+          <Property Name="seatold" Type="nvarchar" MaxLength="255" />
+          <Property Name="sesyr" Type="nvarchar" MaxLength="255" />
+          <Property Name="filler" Type="nvarchar" MaxLength="255" />
+          <Property Name="sport" Type="nvarchar" MaxLength="255" />
+          <Property Name="sportmark" Type="nvarchar" MaxLength="255" />
+          <Property Name="grace" Type="nvarchar" MaxLength="255" />
+          <Property Name="ind" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub1pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub2pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub3pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub4pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub5pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub6pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="subdrop" Type="nvarchar" MaxLength="255" />
+          <Property Name="outofmark" Type="nvarchar" MaxLength="255" />
+          <Property Name="tot500" Type="nvarchar" MaxLength="255" />
+          <Property Name="tot550" Type="nvarchar" MaxLength="255" />
+          <Property Name="tot650" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc500" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc550" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc650" Type="nvarchar" MaxLength="255" />
+          <Property Name="meritperc" Type="nvarchar" MaxLength="255" />
+          <Property Name="minority" Type="nvarchar" MaxLength="255" />
+          <Property Name="t818283" Type="nvarchar" MaxLength="255" />
+          <Property Name="art" Type="nvarchar" MaxLength="255" />
+          <Property Name="aadhar" Type="nvarchar" MaxLength="255" />
+          <Property Name="bplace" Type="nvarchar" MaxLength="255" />
+          <Property Name="div" Type="nvarchar" MaxLength="255" />
+          <Property Name="cata" Type="nvarchar" MaxLength="255" />
+          <Property Name="finalcata" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SSC_Verification_2022.dbo.Tbl_OS_Register_Applied' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Tbl_OS_Register_Applied">
+          <Property Name="exam_code" Type="nvarchar" MaxLength="255" />
+          <Property Name="seat_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="schol_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="srno" Type="nvarchar" MaxLength="255" />
+          <Property Name="center" Type="nvarchar" MaxLength="255" />
+          <Property Name="sex_cd" Type="nvarchar" MaxLength="255" />
+          <Property Name="cast_cd" Type="nvarchar" MaxLength="255" />
+          <Property Name="ph_code" Type="nvarchar" MaxLength="255" />
+          <Property Name="medium" Type="nvarchar" MaxLength="255" />
+          <Property Name="fr_rpt_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="rg_pr_is" Type="nvarchar" MaxLength="255" />
+          <Property Name="exm_nexm" Type="nvarchar" MaxLength="255" />
+          <Property Name="tech" Type="nvarchar" MaxLength="255" />
+          <Property Name="fg" Type="nvarchar" MaxLength="255" />
+          <Property Name="bdate" Type="nvarchar" MaxLength="255" />
+          <Property Name="totsube" Type="nvarchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
+          <Property Name="mname" Type="nvarchar" MaxLength="255" />
+          <Property Name="eligno" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang1" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang1a" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang2" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang2a" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang3" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang3a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub41" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub42" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub4a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub5" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub5a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub6" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub6a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub7" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub7a" Type="nvarchar" MaxLength="255" />
+          <Property Name="op2orsg" Type="nvarchar" MaxLength="255" />
+          <Property Name="op2la" Type="nvarchar" MaxLength="255" />
+          <Property Name="op1la" Type="nvarchar" MaxLength="255" />
+          <Property Name="schsubj1" Type="nvarchar" MaxLength="255" />
+          <Property Name="schsubj2" Type="nvarchar" MaxLength="255" />
+          <Property Name="schsubj3" Type="nvarchar" MaxLength="255" />
+          <Property Name="l1w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l1o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l21w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l21o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l22w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l22o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l3w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l3o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l3i" Type="nvarchar" MaxLength="255" />
+          <Property Name="maths1" Type="nvarchar" MaxLength="255" />
+          <Property Name="maths2" Type="nvarchar" MaxLength="255" />
+          <Property Name="mathsi" Type="nvarchar" MaxLength="255" />
+          <Property Name="scithe1" Type="nvarchar" MaxLength="255" />
+          <Property Name="scithe2" Type="nvarchar" MaxLength="255" />
+          <Property Name="scipra1" Type="nvarchar" MaxLength="255" />
+          <Property Name="scipra2" Type="nvarchar" MaxLength="255" />
+          <Property Name="sosci1" Type="nvarchar" MaxLength="255" />
+          <Property Name="sosci2" Type="nvarchar" MaxLength="255" />
+          <Property Name="soscii" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp1mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp2mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp3mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp4mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="ict1" Type="nvarchar" MaxLength="255" />
+          <Property Name="ict2" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra1" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra2" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra3" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra4" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub1" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub2" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub3" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub4" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub5" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub6" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj1" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj2" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj3" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj4" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj5" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj6" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj7gr" Type="nvarchar" MaxLength="255" />
+          <Property Name="gtotal" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc" Type="nvarchar" MaxLength="255" />
+          <Property Name="passfail" Type="nvarchar" MaxLength="255" />
+          <Property Name="grades" Type="nvarchar" MaxLength="255" />
+          <Property Name="absenti" Type="nvarchar" MaxLength="255" />
+          <Property Name="seatold" Type="nvarchar" MaxLength="255" />
+          <Property Name="sesyr" Type="nvarchar" MaxLength="255" />
+          <Property Name="filler" Type="nvarchar" MaxLength="255" />
+          <Property Name="sport" Type="nvarchar" MaxLength="255" />
+          <Property Name="sportmark" Type="nvarchar" MaxLength="255" />
+          <Property Name="grace" Type="nvarchar" MaxLength="255" />
+          <Property Name="ind" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub1pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub2pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub3pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub4pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub5pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub6pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="subdrop" Type="nvarchar" MaxLength="255" />
+          <Property Name="outofmark" Type="nvarchar" MaxLength="255" />
+          <Property Name="tot500" Type="nvarchar" MaxLength="255" />
+          <Property Name="tot550" Type="nvarchar" MaxLength="255" />
+          <Property Name="tot650" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc500" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc550" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc650" Type="nvarchar" MaxLength="255" />
+          <Property Name="meritperc" Type="nvarchar" MaxLength="255" />
+          <Property Name="minority" Type="nvarchar" MaxLength="255" />
+          <Property Name="t818283" Type="nvarchar" MaxLength="255" />
+          <Property Name="art" Type="nvarchar" MaxLength="255" />
+          <Property Name="aadhar" Type="nvarchar" MaxLength="255" />
+          <Property Name="bplace" Type="nvarchar" MaxLength="255" />
+          <Property Name="div" Type="nvarchar" MaxLength="255" />
+          <Property Name="cata" Type="nvarchar" MaxLength="255" />
+          <Property Name="finalcata" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SSC_Verification_2022.dbo.Tbl_OS_Register_Applied_1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Tbl_OS_Register_Applied_1">
+          <Property Name="exam_code" Type="nvarchar" MaxLength="255" />
+          <Property Name="seat_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="schol_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="srno" Type="nvarchar" MaxLength="255" />
+          <Property Name="center" Type="nvarchar" MaxLength="255" />
+          <Property Name="sex_cd" Type="nvarchar" MaxLength="255" />
+          <Property Name="cast_cd" Type="nvarchar" MaxLength="255" />
+          <Property Name="ph_code" Type="nvarchar" MaxLength="255" />
+          <Property Name="medium" Type="nvarchar" MaxLength="255" />
+          <Property Name="fr_rpt_no" Type="nvarchar" MaxLength="255" />
+          <Property Name="rg_pr_is" Type="nvarchar" MaxLength="255" />
+          <Property Name="exm_nexm" Type="nvarchar" MaxLength="255" />
+          <Property Name="tech" Type="nvarchar" MaxLength="255" />
+          <Property Name="fg" Type="nvarchar" MaxLength="255" />
+          <Property Name="bdate" Type="nvarchar" MaxLength="255" />
+          <Property Name="totsube" Type="nvarchar" MaxLength="255" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
+          <Property Name="mname" Type="nvarchar" MaxLength="255" />
+          <Property Name="eligno" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang1" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang1a" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang2" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang2a" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang3" Type="nvarchar" MaxLength="255" />
+          <Property Name="lang3a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub41" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub42" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub4a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub5" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub5a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub6" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub6a" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub7" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub7a" Type="nvarchar" MaxLength="255" />
+          <Property Name="op2orsg" Type="nvarchar" MaxLength="255" />
+          <Property Name="op2la" Type="nvarchar" MaxLength="255" />
+          <Property Name="op1la" Type="nvarchar" MaxLength="255" />
+          <Property Name="schsubj1" Type="nvarchar" MaxLength="255" />
+          <Property Name="schsubj2" Type="nvarchar" MaxLength="255" />
+          <Property Name="schsubj3" Type="nvarchar" MaxLength="255" />
+          <Property Name="l1w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l1o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l21w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l21o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l22w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l22o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l3w" Type="nvarchar" MaxLength="255" />
+          <Property Name="l3o" Type="nvarchar" MaxLength="255" />
+          <Property Name="l3i" Type="nvarchar" MaxLength="255" />
+          <Property Name="maths1" Type="nvarchar" MaxLength="255" />
+          <Property Name="maths2" Type="nvarchar" MaxLength="255" />
+          <Property Name="mathsi" Type="nvarchar" MaxLength="255" />
+          <Property Name="scithe1" Type="nvarchar" MaxLength="255" />
+          <Property Name="scithe2" Type="nvarchar" MaxLength="255" />
+          <Property Name="scipra1" Type="nvarchar" MaxLength="255" />
+          <Property Name="scipra2" Type="nvarchar" MaxLength="255" />
+          <Property Name="sosci1" Type="nvarchar" MaxLength="255" />
+          <Property Name="sosci2" Type="nvarchar" MaxLength="255" />
+          <Property Name="soscii" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp1mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp2mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp3mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="opp4mark" Type="nvarchar" MaxLength="255" />
+          <Property Name="ict1" Type="nvarchar" MaxLength="255" />
+          <Property Name="ict2" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra1" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra2" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra3" Type="nvarchar" MaxLength="255" />
+          <Property Name="schgra4" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub1" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub2" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub3" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub4" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub5" Type="nvarchar" MaxLength="255" />
+          <Property Name="condsub6" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj1" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj2" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj3" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj4" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj5" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj6" Type="nvarchar" MaxLength="255" />
+          <Property Name="tsubj7gr" Type="nvarchar" MaxLength="255" />
+          <Property Name="gtotal" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc" Type="nvarchar" MaxLength="255" />
+          <Property Name="passfail" Type="nvarchar" MaxLength="255" />
+          <Property Name="grades" Type="nvarchar" MaxLength="255" />
+          <Property Name="absenti" Type="nvarchar" MaxLength="255" />
+          <Property Name="seatold" Type="nvarchar" MaxLength="255" />
+          <Property Name="sesyr" Type="nvarchar" MaxLength="255" />
+          <Property Name="filler" Type="nvarchar" MaxLength="255" />
+          <Property Name="sport" Type="nvarchar" MaxLength="255" />
+          <Property Name="sportmark" Type="nvarchar" MaxLength="255" />
+          <Property Name="grace" Type="nvarchar" MaxLength="255" />
+          <Property Name="ind" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub1pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub2pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub3pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub4pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub5pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub6pf" Type="nvarchar" MaxLength="255" />
+          <Property Name="subdrop" Type="nvarchar" MaxLength="255" />
+          <Property Name="outofmark" Type="nvarchar" MaxLength="255" />
+          <Property Name="tot500" Type="nvarchar" MaxLength="255" />
+          <Property Name="tot550" Type="nvarchar" MaxLength="255" />
+          <Property Name="tot650" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc500" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc550" Type="nvarchar" MaxLength="255" />
+          <Property Name="perc650" Type="nvarchar" MaxLength="255" />
+          <Property Name="meritperc" Type="nvarchar" MaxLength="255" />
+          <Property Name="minority" Type="nvarchar" MaxLength="255" />
+          <Property Name="t818283" Type="nvarchar" MaxLength="255" />
+          <Property Name="art" Type="nvarchar" MaxLength="255" />
+          <Property Name="aadhar" Type="nvarchar" MaxLength="255" />
+          <Property Name="bplace" Type="nvarchar" MaxLength="255" />
+          <Property Name="div" Type="nvarchar" MaxLength="255" />
+          <Property Name="cata" Type="nvarchar" MaxLength="255" />
+          <Property Name="finalcata" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <EntityType Name="Tbl_Payment">
+    <Key>
+      <PropertyRef Name="clientTxnId" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pgRespCode" Type="nvarchar(max)" />
+    <Property Name="PGTxnNo" Type="nvarchar(max)" />
+    <Property Name="SabPaisaTxId" Type="nvarchar(max)" />
+    <Property Name="issuerRefNo" Type="nvarchar(max)" />
+    <Property Name="authIdCode" Type="nvarchar(max)" />
+    <Property Name="amount" Type="nvarchar(max)" />
+    <Property Name="clientTxnId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar(max)" />
+    <Property Name="lastName" Type="nvarchar(max)" />
+    <Property Name="payMode" Type="nvarchar(max)" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="mobileNo" Type="nvarchar(max)" />
+    <Property Name="spRespCode" Type="nvarchar(max)" />
+    <Property Name="cid" Type="nvarchar(max)" />
+    <Property Name="bid" Type="nvarchar(max)" />
+    <Property Name="clientCode" Type="nvarchar(max)" />
+    <Property Name="payeeProfile" Type="nvarchar(max)" />
+    <Property Name="transDate" Type="nvarchar(max)" />
+    <Property Name="spRespStatus" Type="nvarchar(max)" />
+    <Property Name="m3" Type="nvarchar(max)" />
+    <Property Name="challanNo" Type="nvarchar(max)" />
+    <Property Name="reMsg" Type="nvarchar(max)" />
+    <Property Name="orgTxnAmount" Type="nvarchar(max)" />
+    <Property Name="programId" Type="nvarchar(max)" />
+    <Property Name="midName" Type="nvarchar(max)" />
+    <Property Name="Add" Type="nvarchar(max)" />
+    <Property Name="param1" Type="nvarchar(max)" />
+    <Property Name="param2" Type="nvarchar(max)" />
+    <Property Name="param3" Type="nvarchar(max)" />
+    <Property Name="param4" Type="nvarchar(max)" />
+    <Property Name="udf5" Type="nvarchar(max)" />
+    <Property Name="udf6" Type="nvarchar(max)" />
+    <Property Name="udf7" Type="nvarchar(max)" />
+    <Property Name="udf8" Type="nvarchar(max)" />
+    <Property Name="udf9" Type="nvarchar(max)" />
+    <Property Name="udf10" Type="nvarchar(max)" />
+    <Property Name="udf11" Type="nvarchar(max)" />
+    <Property Name="udf12" Type="nvarchar(max)" />
+    <Property Name="udf13" Type="nvarchar(max)" />
+    <Property Name="udf14" Type="nvarchar(max)" />
+    <Property Name="udf15" Type="nvarchar(max)" />
+    <Property Name="udf16" Type="nvarchar(max)" />
+    <Property Name="udf17" Type="nvarchar(max)" />
+    <Property Name="udf18" Type="nvarchar(max)" />
+    <Property Name="udf19" Type="nvarchar(max)" />
+    <Property Name="udf20" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SSC_Verification_2022.dbo.Tbl_Payment_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tbl_Payment_1">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="clientTxnId" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pgRespCode" Type="nvarchar(max)" />
+    <Property Name="PGTxnNo" Type="nvarchar(max)" />
+    <Property Name="SabPaisaTxId" Type="nvarchar(max)" />
+    <Property Name="issuerRefNo" Type="nvarchar(max)" />
+    <Property Name="authIdCode" Type="nvarchar(max)" />
+    <Property Name="amount" Type="nvarchar(max)" />
+    <Property Name="clientTxnId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar(max)" />
+    <Property Name="lastName" Type="nvarchar(max)" />
+    <Property Name="payMode" Type="nvarchar(max)" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="mobileNo" Type="nvarchar(max)" />
+    <Property Name="spRespCode" Type="nvarchar(max)" />
+    <Property Name="cid" Type="nvarchar(max)" />
+    <Property Name="bid" Type="nvarchar(max)" />
+    <Property Name="clientCode" Type="nvarchar(max)" />
+    <Property Name="payeeProfile" Type="nvarchar(max)" />
+    <Property Name="transDate" Type="nvarchar(max)" />
+    <Property Name="spRespStatus" Type="nvarchar(max)" />
+    <Property Name="m3" Type="nvarchar(max)" />
+    <Property Name="challanNo" Type="nvarchar(max)" />
+    <Property Name="reMsg" Type="nvarchar(max)" />
+    <Property Name="orgTxnAmount" Type="nvarchar(max)" />
+    <Property Name="programId" Type="nvarchar(max)" />
+    <Property Name="midName" Type="nvarchar(max)" />
+    <Property Name="Add" Type="nvarchar(max)" />
+    <Property Name="param1" Type="nvarchar(max)" />
+    <Property Name="param2" Type="nvarchar(max)" />
+    <Property Name="param3" Type="nvarchar(max)" />
+    <Property Name="param4" Type="nvarchar(max)" />
+    <Property Name="udf5" Type="nvarchar(max)" />
+    <Property Name="udf6" Type="nvarchar(max)" />
+    <Property Name="udf7" Type="nvarchar(max)" />
+    <Property Name="udf8" Type="nvarchar(max)" />
+    <Property Name="udf9" Type="nvarchar(max)" />
+    <Property Name="udf10" Type="nvarchar(max)" />
+    <Property Name="udf11" Type="nvarchar(max)" />
+    <Property Name="udf12" Type="nvarchar(max)" />
+    <Property Name="udf13" Type="nvarchar(max)" />
+    <Property Name="udf14" Type="nvarchar(max)" />
+    <Property Name="udf15" Type="nvarchar(max)" />
+    <Property Name="udf16" Type="nvarchar(max)" />
+    <Property Name="udf17" Type="nvarchar(max)" />
+    <Property Name="udf18" Type="nvarchar(max)" />
+    <Property Name="udf19" Type="nvarchar(max)" />
+    <Property Name="udf20" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SSC_Verification_2022.dbo.Tbl_Payment_Error' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tbl_Payment_Error">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pgRespCode" Type="nvarchar(max)" />
+    <Property Name="PGTxnNo" Type="nvarchar(max)" />
+    <Property Name="SabPaisaTxId" Type="nvarchar(max)" />
+    <Property Name="issuerRefNo" Type="nvarchar(max)" />
+    <Property Name="authIdCode" Type="nvarchar(max)" />
+    <Property Name="amount" Type="nvarchar(max)" />
+    <Property Name="clientTxnId" Type="nvarchar(max)" />
+    <Property Name="firstName" Type="nvarchar(max)" />
+    <Property Name="lastName" Type="nvarchar(max)" />
+    <Property Name="payMode" Type="nvarchar(max)" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="mobileNo" Type="nvarchar(max)" />
+    <Property Name="spRespCode" Type="nvarchar(max)" />
+    <Property Name="cid" Type="nvarchar(max)" />
+    <Property Name="bid" Type="nvarchar(max)" />
+    <Property Name="clientCode" Type="nvarchar(max)" />
+    <Property Name="payeeProfile" Type="nvarchar(max)" />
+    <Property Name="transDate" Type="nvarchar(max)" />
+    <Property Name="spRespStatus" Type="nvarchar(max)" />
+    <Property Name="m3" Type="nvarchar(max)" />
+    <Property Name="challanNo" Type="nvarchar(max)" />
+    <Property Name="reMsg" Type="nvarchar(max)" />
+    <Property Name="orgTxnAmount" Type="nvarchar(max)" />
+    <Property Name="programId" Type="nvarchar(max)" />
+    <Property Name="midName" Type="nvarchar(max)" />
+    <Property Name="Add" Type="nvarchar(max)" />
+    <Property Name="param1" Type="nvarchar(max)" />
+    <Property Name="param2" Type="nvarchar(max)" />
+    <Property Name="param3" Type="nvarchar(max)" />
+    <Property Name="param4" Type="nvarchar(max)" />
+    <Property Name="udf5" Type="nvarchar(max)" />
+    <Property Name="udf6" Type="nvarchar(max)" />
+    <Property Name="udf7" Type="nvarchar(max)" />
+    <Property Name="udf8" Type="nvarchar(max)" />
+    <Property Name="udf9" Type="nvarchar(max)" />
+    <Property Name="udf10" Type="nvarchar(max)" />
+    <Property Name="udf11" Type="nvarchar(max)" />
+    <Property Name="udf12" Type="nvarchar(max)" />
+    <Property Name="udf13" Type="nvarchar(max)" />
+    <Property Name="udf14" Type="nvarchar(max)" />
+    <Property Name="udf15" Type="nvarchar(max)" />
+    <Property Name="udf16" Type="nvarchar(max)" />
+    <Property Name="udf17" Type="nvarchar(max)" />
+    <Property Name="udf18" Type="nvarchar(max)" />
+    <Property Name="udf19" Type="nvarchar(max)" />
+    <Property Name="udf20" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SSC_Verification_2022.dbo.Tbl_Student_Subject' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tbl_Student_Subject">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Seat_No" Type="nvarchar" MaxLength="7" />
+    <Property Name="Case_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Head" Type="nvarchar" MaxLength="3" />
+    <Property Name="Sub_Code" Type="nvarchar" MaxLength="4" />
+    <Property Name="Actual_Marks" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Marks" Type="nvarchar" MaxLength="50" />
+    <Property Name="Active" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SSC_Verification_2022.dbo.Tbl_Student_Subject_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Tbl_Student_Subject_1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Seat_No" Type="nvarchar" MaxLength="7" />
+    <Property Name="Case_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Head" Type="nvarchar" MaxLength="3" />
+    <Property Name="Sub_Code" Type="nvarchar" MaxLength="4" />
+    <Property Name="Actual_Marks" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Marks" Type="nvarchar" MaxLength="50" />
+    <Property Name="Active" Type="int" />
+  </EntityType>
+  <EntityType Name="Tbl_Verification">
+    <Key>
+      <PropertyRef Name="Unique_ID_Seat_No" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Seat_No" Type="nvarchar" MaxLength="7" Nullable="false" />
+    <Property Name="Payment_Head" Type="int" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Taluka" Type="nvarchar(max)" />
+    <Property Name="District" Type="nvarchar(max)" />
+    <Property Name="Pincode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Mobile_No" Type="nvarchar" MaxLength="10" />
+    <Property Name="Email_ID" Type="nvarchar(max)" />
+    <Property Name="Delivery_Mode" Type="nvarchar" MaxLength="20" />
+    <Property Name="Charge" Type="float" />
+    <Property Name="Total_Payment" Type="float" />
+    <Property Name="SUB1" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB2" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB3" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB4" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB5" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB6" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB7" Type="nvarchar" MaxLength="3" />
+    <Property Name="Unique_ID_Payment" Type="nvarchar(max)" />
+    <Property Name="Unique_ID_Seat_No" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Case_No" Type="nvarchar" MaxLength="20" />
+    <Property Name="Div_Code" Type="int" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Responce" Type="nvarchar(max)" />
+    <Property Name="Reply_DateTime" Type="datetime" />
+    <Property Name="Pre_Ref_ID" Type="int" />
+    <Property Name="Active" Type="int" />
+  </EntityType>
+  <EntityType Name="Tbl_Verification_1">
+    <Key>
+      <PropertyRef Name="Unique_ID_Seat_No" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Seat_No" Type="nvarchar" MaxLength="7" Nullable="false" />
+    <Property Name="Payment_Head" Type="int" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Taluka" Type="nvarchar(max)" />
+    <Property Name="District" Type="nvarchar(max)" />
+    <Property Name="Pincode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Mobile_No" Type="nvarchar" MaxLength="10" />
+    <Property Name="Email_ID" Type="nvarchar(max)" />
+    <Property Name="Delivery_Mode" Type="nvarchar" MaxLength="20" />
+    <Property Name="Charge" Type="float" />
+    <Property Name="Total_Payment" Type="float" />
+    <Property Name="SUB1" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB2" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB3" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB4" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB5" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB6" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB7" Type="nvarchar" MaxLength="3" />
+    <Property Name="Unique_ID_Payment" Type="nvarchar(max)" />
+    <Property Name="Unique_ID_Seat_No" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Case_No" Type="nvarchar" MaxLength="20" />
+    <Property Name="Div_Code" Type="int" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Responce" Type="nvarchar(max)" />
+    <Property Name="Reply_DateTime" Type="datetime" />
+    <Property Name="Pre_Ref_ID" Type="int" />
+    <Property Name="Active" Type="int" />
+  </EntityType>
+  <EntityType Name="Tbl_Verification_Pri">
+    <Key>
+      <PropertyRef Name="Unique_ID_Payment" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Seat_No" Type="nvarchar" MaxLength="7" Nullable="false" />
+    <Property Name="Payment_Head" Type="int" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Taluka" Type="nvarchar(max)" />
+    <Property Name="District" Type="nvarchar(max)" />
+    <Property Name="Pincode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Mobile_No" Type="nvarchar" MaxLength="10" />
+    <Property Name="Email_ID" Type="nvarchar(max)" />
+    <Property Name="Delivery_Mode" Type="nvarchar" MaxLength="20" />
+    <Property Name="Charge" Type="float" />
+    <Property Name="Total_Payment" Type="float" />
+    <Property Name="SUB1" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB2" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB3" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB4" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB5" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB6" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB7" Type="nvarchar" MaxLength="3" />
+    <Property Name="Unique_ID_Payment" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Unique_ID_Seat_No" Type="nvarchar(max)" />
+    <Property Name="Case_No" Type="nvarchar" MaxLength="20" />
+    <Property Name="Div_Code" Type="int" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Responce" Type="nvarchar(max)" />
+    <Property Name="Reply_DateTime" Type="datetime" />
+    <Property Name="Active" Type="int" />
+  </EntityType>
+  <EntityType Name="Tbl_Verification_Pri_1">
+    <Key>
+      <PropertyRef Name="Unique_ID_Payment" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Seat_No" Type="nvarchar" MaxLength="7" Nullable="false" />
+    <Property Name="Payment_Head" Type="int" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Taluka" Type="nvarchar(max)" />
+    <Property Name="District" Type="nvarchar(max)" />
+    <Property Name="Pincode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Mobile_No" Type="nvarchar" MaxLength="10" />
+    <Property Name="Email_ID" Type="nvarchar(max)" />
+    <Property Name="Delivery_Mode" Type="nvarchar" MaxLength="20" />
+    <Property Name="Charge" Type="float" />
+    <Property Name="Total_Payment" Type="float" />
+    <Property Name="SUB1" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB2" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB3" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB4" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB5" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB6" Type="nvarchar" MaxLength="3" />
+    <Property Name="SUB7" Type="nvarchar" MaxLength="3" />
+    <Property Name="Unique_ID_Payment" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Unique_ID_Seat_No" Type="nvarchar(max)" />
+    <Property Name="Case_No" Type="nvarchar" MaxLength="20" />
+    <Property Name="Div_Code" Type="int" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Responce" Type="nvarchar(max)" />
+    <Property Name="Reply_DateTime" Type="datetime" />
+    <Property Name="Active" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SSC_Verification_2022.dbo.UID11122' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="UID11122">
+          <Property Name="div" Type="nvarchar" MaxLength="255" />
+          <Property Name="seat" Type="nvarchar" MaxLength="255" />
+          <Property Name="sub" Type="nvarchar" MaxLength="255" />
+          <Property Name="pap" Type="nvarchar" MaxLength="255" />
+          <Property Name="uid" Type="nvarchar" MaxLength="255" />
+          <Property Name="mark" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <Function Name="SP_GET_STUD_MARKSHEET" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Seat_No" Type="nvarchar" Mode="In" />
+    <Parameter Name="Div_Code" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_INSERT_PENDING_SUBJECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ACTION" Type="nvarchar" Mode="In" />
+    <Parameter Name="Seat_No" Type="nvarchar" Mode="In" />
+    <Parameter Name="Div_code" Type="int" Mode="In" />
+    <Parameter Name="Payment_Head" Type="int" Mode="In" />
+    <Parameter Name="Unique_ID_Payment" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Unique_ID_Seat_No" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Case_No" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Pre_Ref_ID" Type="int" Mode="In" />
+    <Parameter Name="RESULT" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="SP_INSERT_STUDENT_DATA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ACTION" Type="nvarchar" Mode="In" />
+    <Parameter Name="Seat_No" Type="nvarchar" Mode="In" />
+    <Parameter Name="Div_code" Type="int" Mode="In" />
+    <Parameter Name="Payment_Head" Type="int" Mode="In" />
+    <Parameter Name="Unique_ID_Payment" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Unique_ID_Seat_No" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Pre_Ref_ID" Type="int" Mode="In" />
+    <Parameter Name="RESULT" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="SP_INSERT_STUDENT_DATA_PRI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ACTION" Type="nvarchar" Mode="In" />
+    <Parameter Name="Seat_No" Type="nvarchar" Mode="In" />
+    <Parameter Name="Payment_Head" Type="int" Mode="In" />
+    <Parameter Name="Div_Code" Type="int" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Taluka" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="District" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Pincode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Mobile_No" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email_ID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Delivery_Mode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Charge" Type="float" Mode="In" />
+    <Parameter Name="Total_Payment" Type="float" Mode="In" />
+    <Parameter Name="SUB1" Type="nvarchar" Mode="In" />
+    <Parameter Name="SUB2" Type="nvarchar" Mode="In" />
+    <Parameter Name="SUB3" Type="nvarchar" Mode="In" />
+    <Parameter Name="SUB4" Type="nvarchar" Mode="In" />
+    <Parameter Name="SUB5" Type="nvarchar" Mode="In" />
+    <Parameter Name="SUB6" Type="nvarchar" Mode="In" />
+    <Parameter Name="SUB7" Type="nvarchar" Mode="In" />
+    <Parameter Name="Unique_ID_Payment" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Unique_ID_Seat_No" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_INSERT_STUDENT_MIGRATION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ACTION" Type="nvarchar" Mode="In" />
+    <Parameter Name="Seat_No" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Div_Code" Type="int" Mode="In" />
+    <Parameter Name="Unique_ID_Payment" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Unique_ID_Seat_No" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Pre_Ref_ID" Type="int" Mode="In" />
+    <Parameter Name="Result" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="SP_INSERT_STUDENT_MIGRATION_PRI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ACTION" Type="nvarchar" Mode="In" />
+    <Parameter Name="Surname" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Father_Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Mother_Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Mobile_No1" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Mobile_No2" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Seat_No" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Exam" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Year" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Marks" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Percentage" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Center_No" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Center_Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Index_No" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="School_Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Copy_Status" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Amount" Type="int" Mode="In" />
+    <Parameter Name="Div_Code" Type="int" Mode="In" />
+    <Parameter Name="Unique_ID_Payment" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Unique_ID_Seat_No" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Email_ID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Delivery_Mode" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Result" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="SP_INSERT_STUDENT_MIGRATION_TRANSFER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ACTION" Type="nvarchar" Mode="In" />
+    <Parameter Name="Seat_No" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Div_Code" Type="int" Mode="In" />
+    <Parameter Name="Unique_ID_Payment" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Unique_ID_Seat_No" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Pre_Ref_ID" Type="int" Mode="In" />
+    <Parameter Name="Result" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="Sp_Payment_Entry" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="clientTxnId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="firstName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="email" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="spRespStatus" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="udf17" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="udf18" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="udf20" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="SSC_Verification_2022ModelStoreContainer">
+    <EntitySet Name="sqlmapoutput" EntityType="Self.sqlmapoutput" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSCDATA" EntityType="Self.SSCDATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSCDATA_1" EntityType="Self.SSCDATA_1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Daily_Verify" EntityType="Self.Tbl_Daily_Verify" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Daily_Verify_Complete" EntityType="Self.Tbl_Daily_Verify_Complete" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Migration" EntityType="Self.Tbl_Migration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Payment" EntityType="Self.Tbl_Payment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Verification" EntityType="Self.Tbl_Verification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Verification_1" EntityType="Self.Tbl_Verification_1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Verification_Pri" EntityType="Self.Tbl_Verification_Pri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Verification_Pri_1" EntityType="Self.Tbl_Verification_Pri_1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_College_Email" EntityType="Self.Tbl_College_Email" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tbl_College_Email].[ID] AS [ID], 
+    [Tbl_College_Email].[Case_No] AS [Case_No], 
+    [Tbl_College_Email].[College_Email] AS [College_Email], 
+    [Tbl_College_Email].[Active] AS [Active]
+    FROM [dbo].[Tbl_College_Email] AS [Tbl_College_Email]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_Div_Details" EntityType="Self.Tbl_Div_Details" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tbl_Div_Details].[ID] AS [ID], 
+    [Tbl_Div_Details].[DIV_Initial] AS [DIV_Initial], 
+    [Tbl_Div_Details].[Div_Code] AS [Div_Code], 
+    [Tbl_Div_Details].[Div_Name] AS [Div_Name], 
+    [Tbl_Div_Details].[Password] AS [Password]
+    FROM [dbo].[Tbl_Div_Details] AS [Tbl_Div_Details]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_Division_Block" EntityType="Self.Tbl_Division_Block" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tbl_Division_Block].[ID] AS [ID], 
+    [Tbl_Division_Block].[Division_ID] AS [Division_ID], 
+    [Tbl_Division_Block].[Payment_Head] AS [Payment_Head], 
+    [Tbl_Division_Block].[BDate] AS [BDate]
+    FROM [dbo].[Tbl_Division_Block] AS [Tbl_Division_Block]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_Migration_Pri" EntityType="Self.Tbl_Migration_Pri" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tbl_Migration_Pri].[ID] AS [ID], 
+    [Tbl_Migration_Pri].[Surname] AS [Surname], 
+    [Tbl_Migration_Pri].[Name] AS [Name], 
+    [Tbl_Migration_Pri].[Father_Name] AS [Father_Name], 
+    [Tbl_Migration_Pri].[Mother_Name] AS [Mother_Name], 
+    [Tbl_Migration_Pri].[Address] AS [Address], 
+    [Tbl_Migration_Pri].[Mobile_No1] AS [Mobile_No1], 
+    [Tbl_Migration_Pri].[Mobile_No2] AS [Mobile_No2], 
+    [Tbl_Migration_Pri].[Seat_No] AS [Seat_No], 
+    [Tbl_Migration_Pri].[Exam] AS [Exam], 
+    [Tbl_Migration_Pri].[Year] AS [Year], 
+    [Tbl_Migration_Pri].[Marks] AS [Marks], 
+    [Tbl_Migration_Pri].[Percentage] AS [Percentage], 
+    [Tbl_Migration_Pri].[Center_No] AS [Center_No], 
+    [Tbl_Migration_Pri].[Center_Name] AS [Center_Name], 
+    [Tbl_Migration_Pri].[Index_No] AS [Index_No], 
+    [Tbl_Migration_Pri].[School_Name] AS [School_Name], 
+    [Tbl_Migration_Pri].[Copy_Status] AS [Copy_Status], 
+    [Tbl_Migration_Pri].[Amount] AS [Amount], 
+    [Tbl_Migration_Pri].[Unique_ID_Payment] AS [Unique_ID_Payment], 
+    [Tbl_Migration_Pri].[Unique_ID_Seat_No] AS [Unique_ID_Seat_No], 
+    [Tbl_Migration_Pri].[Div_Code] AS [Div_Code], 
+    [Tbl_Migration_Pri].[OnDateTime] AS [OnDateTime], 
+    [Tbl_Migration_Pri].[Email_ID] AS [Email_ID], 
+    [Tbl_Migration_Pri].[Delivery_Mode] AS [Delivery_Mode], 
+    [Tbl_Migration_Pri].[Active] AS [Active]
+    FROM [dbo].[Tbl_Migration_Pri] AS [Tbl_Migration_Pri]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_Payment_1" EntityType="Self.Tbl_Payment_1" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tbl_Payment_1].[ID] AS [ID], 
+    [Tbl_Payment_1].[pgRespCode] AS [pgRespCode], 
+    [Tbl_Payment_1].[PGTxnNo] AS [PGTxnNo], 
+    [Tbl_Payment_1].[SabPaisaTxId] AS [SabPaisaTxId], 
+    [Tbl_Payment_1].[issuerRefNo] AS [issuerRefNo], 
+    [Tbl_Payment_1].[authIdCode] AS [authIdCode], 
+    [Tbl_Payment_1].[amount] AS [amount], 
+    [Tbl_Payment_1].[clientTxnId] AS [clientTxnId], 
+    [Tbl_Payment_1].[firstName] AS [firstName], 
+    [Tbl_Payment_1].[lastName] AS [lastName], 
+    [Tbl_Payment_1].[payMode] AS [payMode], 
+    [Tbl_Payment_1].[email] AS [email], 
+    [Tbl_Payment_1].[mobileNo] AS [mobileNo], 
+    [Tbl_Payment_1].[spRespCode] AS [spRespCode], 
+    [Tbl_Payment_1].[cid] AS [cid], 
+    [Tbl_Payment_1].[bid] AS [bid], 
+    [Tbl_Payment_1].[clientCode] AS [clientCode], 
+    [Tbl_Payment_1].[payeeProfile] AS [payeeProfile], 
+    [Tbl_Payment_1].[transDate] AS [transDate], 
+    [Tbl_Payment_1].[spRespStatus] AS [spRespStatus], 
+    [Tbl_Payment_1].[m3] AS [m3], 
+    [Tbl_Payment_1].[challanNo] AS [challanNo], 
+    [Tbl_Payment_1].[reMsg] AS [reMsg], 
+    [Tbl_Payment_1].[orgTxnAmount] AS [orgTxnAmount], 
+    [Tbl_Payment_1].[programId] AS [programId], 
+    [Tbl_Payment_1].[midName] AS [midName], 
+    [Tbl_Payment_1].[Add] AS [Add], 
+    [Tbl_Payment_1].[param1] AS [param1], 
+    [Tbl_Payment_1].[param2] AS [param2], 
+    [Tbl_Payment_1].[param3] AS [param3], 
+    [Tbl_Payment_1].[param4] AS [param4], 
+    [Tbl_Payment_1].[udf5] AS [udf5], 
+    [Tbl_Payment_1].[udf6] AS [udf6], 
+    [Tbl_Payment_1].[udf7] AS [udf7], 
+    [Tbl_Payment_1].[udf8] AS [udf8], 
+    [Tbl_Payment_1].[udf9] AS [udf9], 
+    [Tbl_Payment_1].[udf10] AS [udf10], 
+    [Tbl_Payment_1].[udf11] AS [udf11], 
+    [Tbl_Payment_1].[udf12] AS [udf12], 
+    [Tbl_Payment_1].[udf13] AS [udf13], 
+    [Tbl_Payment_1].[udf14] AS [udf14], 
+    [Tbl_Payment_1].[udf15] AS [udf15], 
+    [Tbl_Payment_1].[udf16] AS [udf16], 
+    [Tbl_Payment_1].[udf17] AS [udf17], 
+    [Tbl_Payment_1].[udf18] AS [udf18], 
+    [Tbl_Payment_1].[udf19] AS [udf19], 
+    [Tbl_Payment_1].[udf20] AS [udf20]
+    FROM [dbo].[Tbl_Payment_1] AS [Tbl_Payment_1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_Payment_Error" EntityType="Self.Tbl_Payment_Error" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tbl_Payment_Error].[ID] AS [ID], 
+    [Tbl_Payment_Error].[pgRespCode] AS [pgRespCode], 
+    [Tbl_Payment_Error].[PGTxnNo] AS [PGTxnNo], 
+    [Tbl_Payment_Error].[SabPaisaTxId] AS [SabPaisaTxId], 
+    [Tbl_Payment_Error].[issuerRefNo] AS [issuerRefNo], 
+    [Tbl_Payment_Error].[authIdCode] AS [authIdCode], 
+    [Tbl_Payment_Error].[amount] AS [amount], 
+    [Tbl_Payment_Error].[clientTxnId] AS [clientTxnId], 
+    [Tbl_Payment_Error].[firstName] AS [firstName], 
+    [Tbl_Payment_Error].[lastName] AS [lastName], 
+    [Tbl_Payment_Error].[payMode] AS [payMode], 
+    [Tbl_Payment_Error].[email] AS [email], 
+    [Tbl_Payment_Error].[mobileNo] AS [mobileNo], 
+    [Tbl_Payment_Error].[spRespCode] AS [spRespCode], 
+    [Tbl_Payment_Error].[cid] AS [cid], 
+    [Tbl_Payment_Error].[bid] AS [bid], 
+    [Tbl_Payment_Error].[clientCode] AS [clientCode], 
+    [Tbl_Payment_Error].[payeeProfile] AS [payeeProfile], 
+    [Tbl_Payment_Error].[transDate] AS [transDate], 
+    [Tbl_Payment_Error].[spRespStatus] AS [spRespStatus], 
+    [Tbl_Payment_Error].[m3] AS [m3], 
+    [Tbl_Payment_Error].[challanNo] AS [challanNo], 
+    [Tbl_Payment_Error].[reMsg] AS [reMsg], 
+    [Tbl_Payment_Error].[orgTxnAmount] AS [orgTxnAmount], 
+    [Tbl_Payment_Error].[programId] AS [programId], 
+    [Tbl_Payment_Error].[midName] AS [midName], 
+    [Tbl_Payment_Error].[Add] AS [Add], 
+    [Tbl_Payment_Error].[param1] AS [param1], 
+    [Tbl_Payment_Error].[param2] AS [param2], 
+    [Tbl_Payment_Error].[param3] AS [param3], 
+    [Tbl_Payment_Error].[param4] AS [param4], 
+    [Tbl_Payment_Error].[udf5] AS [udf5], 
+    [Tbl_Payment_Error].[udf6] AS [udf6], 
+    [Tbl_Payment_Error].[udf7] AS [udf7], 
+    [Tbl_Payment_Error].[udf8] AS [udf8], 
+    [Tbl_Payment_Error].[udf9] AS [udf9], 
+    [Tbl_Payment_Error].[udf10] AS [udf10], 
+    [Tbl_Payment_Error].[udf11] AS [udf11], 
+    [Tbl_Payment_Error].[udf12] AS [udf12], 
+    [Tbl_Payment_Error].[udf13] AS [udf13], 
+    [Tbl_Payment_Error].[udf14] AS [udf14], 
+    [Tbl_Payment_Error].[udf15] AS [udf15], 
+    [Tbl_Payment_Error].[udf16] AS [udf16], 
+    [Tbl_Payment_Error].[udf17] AS [udf17], 
+    [Tbl_Payment_Error].[udf18] AS [udf18], 
+    [Tbl_Payment_Error].[udf19] AS [udf19], 
+    [Tbl_Payment_Error].[udf20] AS [udf20]
+    FROM [dbo].[Tbl_Payment_Error] AS [Tbl_Payment_Error]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_Student_Subject" EntityType="Self.Tbl_Student_Subject" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tbl_Student_Subject].[ID] AS [ID], 
+    [Tbl_Student_Subject].[Seat_No] AS [Seat_No], 
+    [Tbl_Student_Subject].[Case_No] AS [Case_No], 
+    [Tbl_Student_Subject].[Head] AS [Head], 
+    [Tbl_Student_Subject].[Sub_Code] AS [Sub_Code], 
+    [Tbl_Student_Subject].[Actual_Marks] AS [Actual_Marks], 
+    [Tbl_Student_Subject].[Update_Marks] AS [Update_Marks], 
+    [Tbl_Student_Subject].[Active] AS [Active]
+    FROM [dbo].[Tbl_Student_Subject] AS [Tbl_Student_Subject]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_Student_Subject_1" EntityType="Self.Tbl_Student_Subject_1" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tbl_Student_Subject_1].[ID] AS [ID], 
+    [Tbl_Student_Subject_1].[Seat_No] AS [Seat_No], 
+    [Tbl_Student_Subject_1].[Case_No] AS [Case_No], 
+    [Tbl_Student_Subject_1].[Head] AS [Head], 
+    [Tbl_Student_Subject_1].[Sub_Code] AS [Sub_Code], 
+    [Tbl_Student_Subject_1].[Actual_Marks] AS [Actual_Marks], 
+    [Tbl_Student_Subject_1].[Update_Marks] AS [Update_Marks], 
+    [Tbl_Student_Subject_1].[Active] AS [Active]
+    FROM [dbo].[Tbl_Student_Subject_1] AS [Tbl_Student_Subject_1]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

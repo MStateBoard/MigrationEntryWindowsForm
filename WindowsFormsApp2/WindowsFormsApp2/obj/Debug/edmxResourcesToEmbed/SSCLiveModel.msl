@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SSC_Verification_2022ModelStoreContainer" CdmEntityContainer="SSC_Verification_2022Entities">
+    <EntitySetMapping Name="sqlmapoutputs">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.sqlmapoutput">
+        <MappingFragment StoreEntitySet="sqlmapoutput">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSCDATAs">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.SSCDATA">
+        <MappingFragment StoreEntitySet="SSCDATA">
+          <ScalarProperty Name="DIV" ColumnName="DIV" />
+          <ScalarProperty Name="SCH" ColumnName="SCH" />
+          <ScalarProperty Name="SEAT" ColumnName="SEAT" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SUB1" ColumnName="SUB1" />
+          <ScalarProperty Name="MARK1" ColumnName="MARK1" />
+          <ScalarProperty Name="SUB2" ColumnName="SUB2" />
+          <ScalarProperty Name="MARK2" ColumnName="MARK2" />
+          <ScalarProperty Name="SUB3" ColumnName="SUB3" />
+          <ScalarProperty Name="MARK3" ColumnName="MARK3" />
+          <ScalarProperty Name="SUB4" ColumnName="SUB4" />
+          <ScalarProperty Name="MARK4" ColumnName="MARK4" />
+          <ScalarProperty Name="SUB5" ColumnName="SUB5" />
+          <ScalarProperty Name="MARK5" ColumnName="MARK5" />
+          <ScalarProperty Name="SUB6" ColumnName="SUB6" />
+          <ScalarProperty Name="MARK6" ColumnName="MARK6" />
+          <ScalarProperty Name="SUB7" ColumnName="SUB7" />
+          <ScalarProperty Name="MARK7" ColumnName="MARK7" />
+          <ScalarProperty Name="SUB8" ColumnName="SUB8" />
+          <ScalarProperty Name="MARK8" ColumnName="MARK8" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="OUTOF" ColumnName="OUTOF" />
+          <ScalarProperty Name="SIGN" ColumnName="SIGN" />
+          <ScalarProperty Name="GRACE" ColumnName="GRACE" />
+          <ScalarProperty Name="COURSE" ColumnName="COURSE" />
+          <ScalarProperty Name="MOTHER" ColumnName="MOTHER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSCDATA_1">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.SSCDATA_1">
+        <MappingFragment StoreEntitySet="SSCDATA_1">
+          <ScalarProperty Name="DIV" ColumnName="DIV" />
+          <ScalarProperty Name="SCH" ColumnName="SCH" />
+          <ScalarProperty Name="SEAT" ColumnName="SEAT" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SUB1" ColumnName="SUB1" />
+          <ScalarProperty Name="MARK1" ColumnName="MARK1" />
+          <ScalarProperty Name="SUB2" ColumnName="SUB2" />
+          <ScalarProperty Name="MARK2" ColumnName="MARK2" />
+          <ScalarProperty Name="SUB3" ColumnName="SUB3" />
+          <ScalarProperty Name="MARK3" ColumnName="MARK3" />
+          <ScalarProperty Name="SUB4" ColumnName="SUB4" />
+          <ScalarProperty Name="MARK4" ColumnName="MARK4" />
+          <ScalarProperty Name="SUB5" ColumnName="SUB5" />
+          <ScalarProperty Name="MARK5" ColumnName="MARK5" />
+          <ScalarProperty Name="SUB6" ColumnName="SUB6" />
+          <ScalarProperty Name="MARK6" ColumnName="MARK6" />
+          <ScalarProperty Name="SUB7" ColumnName="SUB7" />
+          <ScalarProperty Name="MARK7" ColumnName="MARK7" />
+          <ScalarProperty Name="SUB8" ColumnName="SUB8" />
+          <ScalarProperty Name="MARK8" ColumnName="MARK8" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="OUTOF" ColumnName="OUTOF" />
+          <ScalarProperty Name="SIGN" ColumnName="SIGN" />
+          <ScalarProperty Name="GRACE" ColumnName="GRACE" />
+          <ScalarProperty Name="COURSE" ColumnName="COURSE" />
+          <ScalarProperty Name="MOTHER" ColumnName="MOTHER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Daily_Verify">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Daily_Verify">
+        <MappingFragment StoreEntitySet="Tbl_Daily_Verify">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+          <ScalarProperty Name="UNIQUE_ID_PAYMENT" ColumnName="UNIQUE_ID_PAYMENT" />
+          <ScalarProperty Name="Payment_Status" ColumnName="Payment_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Daily_Verify_Complete">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Daily_Verify_Complete">
+        <MappingFragment StoreEntitySet="Tbl_Daily_Verify_Complete">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+          <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Migration">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Migration">
+        <MappingFragment StoreEntitySet="Tbl_Migration">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+          <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Mobile_No1" ColumnName="Mobile_No1" />
+          <ScalarProperty Name="Mobile_No2" ColumnName="Mobile_No2" />
+          <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+          <ScalarProperty Name="Exam" ColumnName="Exam" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Marks" ColumnName="Marks" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="Center_No" ColumnName="Center_No" />
+          <ScalarProperty Name="Center_Name" ColumnName="Center_Name" />
+          <ScalarProperty Name="Index_No" ColumnName="Index_No" />
+          <ScalarProperty Name="School_Name" ColumnName="School_Name" />
+          <ScalarProperty Name="Copy_Status" ColumnName="Copy_Status" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Unique_ID_Payment" ColumnName="Unique_ID_Payment" />
+          <ScalarProperty Name="Unique_ID_Seat_No" ColumnName="Unique_ID_Seat_No" />
+          <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+          <ScalarProperty Name="Pre_Ref_ID" ColumnName="Pre_Ref_ID" />
+          <ScalarProperty Name="OnDateTime" ColumnName="OnDateTime" />
+          <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+          <ScalarProperty Name="Delivery_Mode" ColumnName="Delivery_Mode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Responce" ColumnName="Responce" />
+          <ScalarProperty Name="Reply_DateTime" ColumnName="Reply_DateTime" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Payment">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Payment">
+        <MappingFragment StoreEntitySet="Tbl_Payment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="pgRespCode" ColumnName="pgRespCode" />
+          <ScalarProperty Name="PGTxnNo" ColumnName="PGTxnNo" />
+          <ScalarProperty Name="SabPaisaTxId" ColumnName="SabPaisaTxId" />
+          <ScalarProperty Name="issuerRefNo" ColumnName="issuerRefNo" />
+          <ScalarProperty Name="authIdCode" ColumnName="authIdCode" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="clientTxnId" ColumnName="clientTxnId" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobileNo" ColumnName="mobileNo" />
+          <ScalarProperty Name="spRespCode" ColumnName="spRespCode" />
+          <ScalarProperty Name="cid" ColumnName="cid" />
+          <ScalarProperty Name="bid" ColumnName="bid" />
+          <ScalarProperty Name="clientCode" ColumnName="clientCode" />
+          <ScalarProperty Name="payeeProfile" ColumnName="payeeProfile" />
+          <ScalarProperty Name="transDate" ColumnName="transDate" />
+          <ScalarProperty Name="spRespStatus" ColumnName="spRespStatus" />
+          <ScalarProperty Name="m3" ColumnName="m3" />
+          <ScalarProperty Name="challanNo" ColumnName="challanNo" />
+          <ScalarProperty Name="reMsg" ColumnName="reMsg" />
+          <ScalarProperty Name="orgTxnAmount" ColumnName="orgTxnAmount" />
+          <ScalarProperty Name="programId" ColumnName="programId" />
+          <ScalarProperty Name="midName" ColumnName="midName" />
+          <ScalarProperty Name="Add" ColumnName="Add" />
+          <ScalarProperty Name="param1" ColumnName="param1" />
+          <ScalarProperty Name="param2" ColumnName="param2" />
+          <ScalarProperty Name="param3" ColumnName="param3" />
+          <ScalarProperty Name="param4" ColumnName="param4" />
+          <ScalarProperty Name="udf5" ColumnName="udf5" />
+          <ScalarProperty Name="udf6" ColumnName="udf6" />
+          <ScalarProperty Name="udf7" ColumnName="udf7" />
+          <ScalarProperty Name="udf8" ColumnName="udf8" />
+          <ScalarProperty Name="udf9" ColumnName="udf9" />
+          <ScalarProperty Name="udf10" ColumnName="udf10" />
+          <ScalarProperty Name="udf11" ColumnName="udf11" />
+          <ScalarProperty Name="udf12" ColumnName="udf12" />
+          <ScalarProperty Name="udf13" ColumnName="udf13" />
+          <ScalarProperty Name="udf14" ColumnName="udf14" />
+          <ScalarProperty Name="udf15" ColumnName="udf15" />
+          <ScalarProperty Name="udf16" ColumnName="udf16" />
+          <ScalarProperty Name="udf17" ColumnName="udf17" />
+          <ScalarProperty Name="udf18" ColumnName="udf18" />
+          <ScalarProperty Name="udf19" ColumnName="udf19" />
+          <ScalarProperty Name="udf20" ColumnName="udf20" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Verification">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Verification">
+        <MappingFragment StoreEntitySet="Tbl_Verification">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+          <ScalarProperty Name="Payment_Head" ColumnName="Payment_Head" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+          <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+          <ScalarProperty Name="Delivery_Mode" ColumnName="Delivery_Mode" />
+          <ScalarProperty Name="Charge" ColumnName="Charge" />
+          <ScalarProperty Name="Total_Payment" ColumnName="Total_Payment" />
+          <ScalarProperty Name="SUB1" ColumnName="SUB1" />
+          <ScalarProperty Name="SUB2" ColumnName="SUB2" />
+          <ScalarProperty Name="SUB3" ColumnName="SUB3" />
+          <ScalarProperty Name="SUB4" ColumnName="SUB4" />
+          <ScalarProperty Name="SUB5" ColumnName="SUB5" />
+          <ScalarProperty Name="SUB6" ColumnName="SUB6" />
+          <ScalarProperty Name="SUB7" ColumnName="SUB7" />
+          <ScalarProperty Name="Unique_ID_Payment" ColumnName="Unique_ID_Payment" />
+          <ScalarProperty Name="Unique_ID_Seat_No" ColumnName="Unique_ID_Seat_No" />
+          <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+          <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Responce" ColumnName="Responce" />
+          <ScalarProperty Name="Reply_DateTime" ColumnName="Reply_DateTime" />
+          <ScalarProperty Name="Pre_Ref_ID" ColumnName="Pre_Ref_ID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Verification_1">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Verification_1">
+        <MappingFragment StoreEntitySet="Tbl_Verification_1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+          <ScalarProperty Name="Payment_Head" ColumnName="Payment_Head" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+          <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+          <ScalarProperty Name="Delivery_Mode" ColumnName="Delivery_Mode" />
+          <ScalarProperty Name="Charge" ColumnName="Charge" />
+          <ScalarProperty Name="Total_Payment" ColumnName="Total_Payment" />
+          <ScalarProperty Name="SUB1" ColumnName="SUB1" />
+          <ScalarProperty Name="SUB2" ColumnName="SUB2" />
+          <ScalarProperty Name="SUB3" ColumnName="SUB3" />
+          <ScalarProperty Name="SUB4" ColumnName="SUB4" />
+          <ScalarProperty Name="SUB5" ColumnName="SUB5" />
+          <ScalarProperty Name="SUB6" ColumnName="SUB6" />
+          <ScalarProperty Name="SUB7" ColumnName="SUB7" />
+          <ScalarProperty Name="Unique_ID_Payment" ColumnName="Unique_ID_Payment" />
+          <ScalarProperty Name="Unique_ID_Seat_No" ColumnName="Unique_ID_Seat_No" />
+          <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+          <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Responce" ColumnName="Responce" />
+          <ScalarProperty Name="Reply_DateTime" ColumnName="Reply_DateTime" />
+          <ScalarProperty Name="Pre_Ref_ID" ColumnName="Pre_Ref_ID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Verification_Pri">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Verification_Pri">
+        <MappingFragment StoreEntitySet="Tbl_Verification_Pri">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+          <ScalarProperty Name="Payment_Head" ColumnName="Payment_Head" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+          <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+          <ScalarProperty Name="Delivery_Mode" ColumnName="Delivery_Mode" />
+          <ScalarProperty Name="Charge" ColumnName="Charge" />
+          <ScalarProperty Name="Total_Payment" ColumnName="Total_Payment" />
+          <ScalarProperty Name="SUB1" ColumnName="SUB1" />
+          <ScalarProperty Name="SUB2" ColumnName="SUB2" />
+          <ScalarProperty Name="SUB3" ColumnName="SUB3" />
+          <ScalarProperty Name="SUB4" ColumnName="SUB4" />
+          <ScalarProperty Name="SUB5" ColumnName="SUB5" />
+          <ScalarProperty Name="SUB6" ColumnName="SUB6" />
+          <ScalarProperty Name="SUB7" ColumnName="SUB7" />
+          <ScalarProperty Name="Unique_ID_Payment" ColumnName="Unique_ID_Payment" />
+          <ScalarProperty Name="Unique_ID_Seat_No" ColumnName="Unique_ID_Seat_No" />
+          <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+          <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Responce" ColumnName="Responce" />
+          <ScalarProperty Name="Reply_DateTime" ColumnName="Reply_DateTime" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Verification_Pri_1">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Verification_Pri_1">
+        <MappingFragment StoreEntitySet="Tbl_Verification_Pri_1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+          <ScalarProperty Name="Payment_Head" ColumnName="Payment_Head" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+          <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+          <ScalarProperty Name="Delivery_Mode" ColumnName="Delivery_Mode" />
+          <ScalarProperty Name="Charge" ColumnName="Charge" />
+          <ScalarProperty Name="Total_Payment" ColumnName="Total_Payment" />
+          <ScalarProperty Name="SUB1" ColumnName="SUB1" />
+          <ScalarProperty Name="SUB2" ColumnName="SUB2" />
+          <ScalarProperty Name="SUB3" ColumnName="SUB3" />
+          <ScalarProperty Name="SUB4" ColumnName="SUB4" />
+          <ScalarProperty Name="SUB5" ColumnName="SUB5" />
+          <ScalarProperty Name="SUB6" ColumnName="SUB6" />
+          <ScalarProperty Name="SUB7" ColumnName="SUB7" />
+          <ScalarProperty Name="Unique_ID_Payment" ColumnName="Unique_ID_Payment" />
+          <ScalarProperty Name="Unique_ID_Seat_No" ColumnName="Unique_ID_Seat_No" />
+          <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+          <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Responce" ColumnName="Responce" />
+          <ScalarProperty Name="Reply_DateTime" ColumnName="Reply_DateTime" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_College_Email">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_College_Email">
+        <MappingFragment StoreEntitySet="Tbl_College_Email">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+          <ScalarProperty Name="College_Email" ColumnName="College_Email" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Div_Details">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Div_Details">
+        <MappingFragment StoreEntitySet="Tbl_Div_Details">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DIV_Initial" ColumnName="DIV_Initial" />
+          <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+          <ScalarProperty Name="Div_Name" ColumnName="Div_Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Division_Block">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Division_Block">
+        <MappingFragment StoreEntitySet="Tbl_Division_Block">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Division_ID" ColumnName="Division_ID" />
+          <ScalarProperty Name="Payment_Head" ColumnName="Payment_Head" />
+          <ScalarProperty Name="BDate" ColumnName="BDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Migration_Pri">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Migration_Pri">
+        <MappingFragment StoreEntitySet="Tbl_Migration_Pri">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+          <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Mobile_No1" ColumnName="Mobile_No1" />
+          <ScalarProperty Name="Mobile_No2" ColumnName="Mobile_No2" />
+          <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+          <ScalarProperty Name="Exam" ColumnName="Exam" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Marks" ColumnName="Marks" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="Center_No" ColumnName="Center_No" />
+          <ScalarProperty Name="Center_Name" ColumnName="Center_Name" />
+          <ScalarProperty Name="Index_No" ColumnName="Index_No" />
+          <ScalarProperty Name="School_Name" ColumnName="School_Name" />
+          <ScalarProperty Name="Copy_Status" ColumnName="Copy_Status" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Unique_ID_Payment" ColumnName="Unique_ID_Payment" />
+          <ScalarProperty Name="Unique_ID_Seat_No" ColumnName="Unique_ID_Seat_No" />
+          <ScalarProperty Name="Div_Code" ColumnName="Div_Code" />
+          <ScalarProperty Name="OnDateTime" ColumnName="OnDateTime" />
+          <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+          <ScalarProperty Name="Delivery_Mode" ColumnName="Delivery_Mode" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Payment_1">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Payment_1">
+        <MappingFragment StoreEntitySet="Tbl_Payment_1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="pgRespCode" ColumnName="pgRespCode" />
+          <ScalarProperty Name="PGTxnNo" ColumnName="PGTxnNo" />
+          <ScalarProperty Name="SabPaisaTxId" ColumnName="SabPaisaTxId" />
+          <ScalarProperty Name="issuerRefNo" ColumnName="issuerRefNo" />
+          <ScalarProperty Name="authIdCode" ColumnName="authIdCode" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="clientTxnId" ColumnName="clientTxnId" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobileNo" ColumnName="mobileNo" />
+          <ScalarProperty Name="spRespCode" ColumnName="spRespCode" />
+          <ScalarProperty Name="cid" ColumnName="cid" />
+          <ScalarProperty Name="bid" ColumnName="bid" />
+          <ScalarProperty Name="clientCode" ColumnName="clientCode" />
+          <ScalarProperty Name="payeeProfile" ColumnName="payeeProfile" />
+          <ScalarProperty Name="transDate" ColumnName="transDate" />
+          <ScalarProperty Name="spRespStatus" ColumnName="spRespStatus" />
+          <ScalarProperty Name="m3" ColumnName="m3" />
+          <ScalarProperty Name="challanNo" ColumnName="challanNo" />
+          <ScalarProperty Name="reMsg" ColumnName="reMsg" />
+          <ScalarProperty Name="orgTxnAmount" ColumnName="orgTxnAmount" />
+          <ScalarProperty Name="programId" ColumnName="programId" />
+          <ScalarProperty Name="midName" ColumnName="midName" />
+          <ScalarProperty Name="Add" ColumnName="Add" />
+          <ScalarProperty Name="param1" ColumnName="param1" />
+          <ScalarProperty Name="param2" ColumnName="param2" />
+          <ScalarProperty Name="param3" ColumnName="param3" />
+          <ScalarProperty Name="param4" ColumnName="param4" />
+          <ScalarProperty Name="udf5" ColumnName="udf5" />
+          <ScalarProperty Name="udf6" ColumnName="udf6" />
+          <ScalarProperty Name="udf7" ColumnName="udf7" />
+          <ScalarProperty Name="udf8" ColumnName="udf8" />
+          <ScalarProperty Name="udf9" ColumnName="udf9" />
+          <ScalarProperty Name="udf10" ColumnName="udf10" />
+          <ScalarProperty Name="udf11" ColumnName="udf11" />
+          <ScalarProperty Name="udf12" ColumnName="udf12" />
+          <ScalarProperty Name="udf13" ColumnName="udf13" />
+          <ScalarProperty Name="udf14" ColumnName="udf14" />
+          <ScalarProperty Name="udf15" ColumnName="udf15" />
+          <ScalarProperty Name="udf16" ColumnName="udf16" />
+          <ScalarProperty Name="udf17" ColumnName="udf17" />
+          <ScalarProperty Name="udf18" ColumnName="udf18" />
+          <ScalarProperty Name="udf19" ColumnName="udf19" />
+          <ScalarProperty Name="udf20" ColumnName="udf20" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Payment_Error">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Payment_Error">
+        <MappingFragment StoreEntitySet="Tbl_Payment_Error">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="pgRespCode" ColumnName="pgRespCode" />
+          <ScalarProperty Name="PGTxnNo" ColumnName="PGTxnNo" />
+          <ScalarProperty Name="SabPaisaTxId" ColumnName="SabPaisaTxId" />
+          <ScalarProperty Name="issuerRefNo" ColumnName="issuerRefNo" />
+          <ScalarProperty Name="authIdCode" ColumnName="authIdCode" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="clientTxnId" ColumnName="clientTxnId" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobileNo" ColumnName="mobileNo" />
+          <ScalarProperty Name="spRespCode" ColumnName="spRespCode" />
+          <ScalarProperty Name="cid" ColumnName="cid" />
+          <ScalarProperty Name="bid" ColumnName="bid" />
+          <ScalarProperty Name="clientCode" ColumnName="clientCode" />
+          <ScalarProperty Name="payeeProfile" ColumnName="payeeProfile" />
+          <ScalarProperty Name="transDate" ColumnName="transDate" />
+          <ScalarProperty Name="spRespStatus" ColumnName="spRespStatus" />
+          <ScalarProperty Name="m3" ColumnName="m3" />
+          <ScalarProperty Name="challanNo" ColumnName="challanNo" />
+          <ScalarProperty Name="reMsg" ColumnName="reMsg" />
+          <ScalarProperty Name="orgTxnAmount" ColumnName="orgTxnAmount" />
+          <ScalarProperty Name="programId" ColumnName="programId" />
+          <ScalarProperty Name="midName" ColumnName="midName" />
+          <ScalarProperty Name="Add" ColumnName="Add" />
+          <ScalarProperty Name="param1" ColumnName="param1" />
+          <ScalarProperty Name="param2" ColumnName="param2" />
+          <ScalarProperty Name="param3" ColumnName="param3" />
+          <ScalarProperty Name="param4" ColumnName="param4" />
+          <ScalarProperty Name="udf5" ColumnName="udf5" />
+          <ScalarProperty Name="udf6" ColumnName="udf6" />
+          <ScalarProperty Name="udf7" ColumnName="udf7" />
+          <ScalarProperty Name="udf8" ColumnName="udf8" />
+          <ScalarProperty Name="udf9" ColumnName="udf9" />
+          <ScalarProperty Name="udf10" ColumnName="udf10" />
+          <ScalarProperty Name="udf11" ColumnName="udf11" />
+          <ScalarProperty Name="udf12" ColumnName="udf12" />
+          <ScalarProperty Name="udf13" ColumnName="udf13" />
+          <ScalarProperty Name="udf14" ColumnName="udf14" />
+          <ScalarProperty Name="udf15" ColumnName="udf15" />
+          <ScalarProperty Name="udf16" ColumnName="udf16" />
+          <ScalarProperty Name="udf17" ColumnName="udf17" />
+          <ScalarProperty Name="udf18" ColumnName="udf18" />
+          <ScalarProperty Name="udf19" ColumnName="udf19" />
+          <ScalarProperty Name="udf20" ColumnName="udf20" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Student_Subject">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Student_Subject">
+        <MappingFragment StoreEntitySet="Tbl_Student_Subject">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+          <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+          <ScalarProperty Name="Head" ColumnName="Head" />
+          <ScalarProperty Name="Sub_Code" ColumnName="Sub_Code" />
+          <ScalarProperty Name="Actual_Marks" ColumnName="Actual_Marks" />
+          <ScalarProperty Name="Update_Marks" ColumnName="Update_Marks" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Student_Subject_1">
+      <EntityTypeMapping TypeName="SSC_Verification_2022Model.Tbl_Student_Subject_1">
+        <MappingFragment StoreEntitySet="Tbl_Student_Subject_1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+          <ScalarProperty Name="Case_No" ColumnName="Case_No" />
+          <ScalarProperty Name="Head" ColumnName="Head" />
+          <ScalarProperty Name="Sub_Code" ColumnName="Sub_Code" />
+          <ScalarProperty Name="Actual_Marks" ColumnName="Actual_Marks" />
+          <ScalarProperty Name="Update_Marks" ColumnName="Update_Marks" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_STUD_MARKSHEET" FunctionName="SSC_Verification_2022Model.Store.SP_GET_STUD_MARKSHEET" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_PENDING_SUBJECT" FunctionName="SSC_Verification_2022Model.Store.SP_INSERT_PENDING_SUBJECT" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_STUDENT_DATA" FunctionName="SSC_Verification_2022Model.Store.SP_INSERT_STUDENT_DATA" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_STUDENT_DATA_PRI" FunctionName="SSC_Verification_2022Model.Store.SP_INSERT_STUDENT_DATA_PRI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SSC_Verification_2022Model.SP_INSERT_STUDENT_DATA_PRI_Result">
+          <ScalarProperty Name="SEAT" ColumnName="SEAT" />
+          <ScalarProperty Name="SCH" ColumnName="SCH" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="DIV" ColumnName="DIV" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_INSERT_STUDENT_MIGRATION" FunctionName="SSC_Verification_2022Model.Store.SP_INSERT_STUDENT_MIGRATION" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_STUDENT_MIGRATION_PRI" FunctionName="SSC_Verification_2022Model.Store.SP_INSERT_STUDENT_MIGRATION_PRI" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_STUDENT_MIGRATION_TRANSFER" FunctionName="SSC_Verification_2022Model.Store.SP_INSERT_STUDENT_MIGRATION_TRANSFER" />
+    <FunctionImportMapping FunctionImportName="Sp_Payment_Entry" FunctionName="SSC_Verification_2022Model.Store.Sp_Payment_Entry" />
+  </EntityContainerMapping>
+</Mapping>

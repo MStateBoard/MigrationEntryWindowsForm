@@ -1,0 +1,1225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Verification2022Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Tbl_Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Heading" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Extension" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Tbl_College_Email">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Case_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="College_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Tbl_Div_Details">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DIV_Initial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Div_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Div_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_Div_Login">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_HSC_Data">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DIV" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SCH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SEAT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TOTAL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OUTOF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SIGN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GRACE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COURSE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MOTHER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_HSC_Division_Block">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Division_ID" Type="Int32" />
+    <Property Name="Payment_Head" Type="Int32" />
+    <Property Name="BDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Tbl_HSC_Payment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pgRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PGTxnNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SabPaisaTxId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="issuerRefNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="authIdCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="clientTxnId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="payMode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="spRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="bid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="clientCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="payeeProfile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="transDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="spRespStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="m3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="challanNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="reMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="orgTxnAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="programId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="midName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Add" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf16" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf17" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf18" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf19" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_HSC_Payment_Error">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pgRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PGTxnNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SabPaisaTxId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="issuerRefNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="authIdCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="clientTxnId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="payMode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="spRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="bid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="clientCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="payeeProfile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="transDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="spRespStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="m3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="challanNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="reMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="orgTxnAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="programId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="midName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Add" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf16" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf17" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf18" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf19" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_HSC_Student_Subject">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Seat_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="Case_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Head" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Sub_Code" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Actual_Marks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Update_Marks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Tbl_HSC_SUB">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SUBCODE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUBNAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_HSC_UID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DIV" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SEAT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PAP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_HSC_Verification">
+    <Key>
+      <PropertyRef Name="Unique_ID_Seat_No" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Seat_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Payment_Head" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Email_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Mode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Charge" Type="Double" />
+    <Property Name="Total_Payment" Type="Double" />
+    <Property Name="SUB1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Unique_ID_Payment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Case_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Div_Code" Type="Int32" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Responce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Reply_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Pre_Ref_ID" Type="Int32" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Tbl_HSC_Verification_Pri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Seat_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Payment_Head" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Email_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Mode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Charge" Type="Double" />
+    <Property Name="Total_Payment" Type="Double" />
+    <Property Name="SUB1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Unique_ID_Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Case_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Div_Code" Type="Int32" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Responce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Reply_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Tbl_Migration">
+    <Key>
+      <PropertyRef Name="Unique_ID_Payment" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Case_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Father_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mother_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_No1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_No2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Seat_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Exam" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Marks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Percentage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Center_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Center_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Index_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="School_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Copy_Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="Unique_ID_Payment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Div_Code" Type="Int32" />
+    <Property Name="Pre_Ref_ID" Type="Int32" />
+    <Property Name="OnDateTime" Type="DateTime" Precision="3" />
+    <Property Name="Email_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Mode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Responce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Reply_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Tbl_Migration_Pri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Last_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Middle_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="First_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mother_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_No1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_No2" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Email_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Exam" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Seat_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Marks" Type="Int32" />
+    <Property Name="Percentage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Center_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Center_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Index_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="Sch_Col_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Delievery_Mode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Copy_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="Unique_ID_Payment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Div_Code" Type="Int32" />
+    <Property Name="OnDateTime" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Tbl_OS_HSC">
+    <Key>
+      <PropertyRef Name="SEAT_NO" />
+    </Key>
+    <Property Name="SEAT_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EXAM_CODE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DIVN_CODE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SCHOL_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SRNO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="STREAM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CENTER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SEX_CD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CAST_CD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MEDIUM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FR_RPT_NOC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RG_PR_IS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EXM_NEXM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TECH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FORN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MNAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ELGB_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ENROL_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TOT_EXM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB1TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB1OR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB2TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB2OR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3TH2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3PR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3PR2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4TH2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4PR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4PR2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5TH2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5PR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5PR2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6TH2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6PR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6PR2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7TH2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7PR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7PR2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ABS_SUBJ" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RES_DEBAR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TOTAL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PERCENT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PASS_FAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GRADE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GRACE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUBJ_OFFER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUBJ_PASS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUBJ_FAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SEATOLD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SESYR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SPORT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SPORTMARK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MINORITY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AADHAR_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="M30" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FLAG" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C_NullFlags" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_OS_HSC_Applied">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SEAT_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EXAM_CODE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DIVN_CODE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SCHOL_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SRNO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="STREAM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CENTER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SEX_CD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CAST_CD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MEDIUM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FR_RPT_NOC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RG_PR_IS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EXM_NEXM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TECH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FORN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MNAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ELGB_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ENROL_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TOT_EXM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB1TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB1OR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB2TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB2OR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3TH2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3PR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3PR2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4TH2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4PR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4PR2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5TH2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5PR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5PR2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6TH2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6PR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6PR2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7TH1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7TH2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7PR1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7PR2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COND7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LANG9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ABS_SUBJ" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RES_DEBAR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TOTAL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PERCENT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PASS_FAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GRADE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GRACE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUBJ_OFFER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUBJ_PASS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUBJ_FAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SEATOLD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SESYR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SPORT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SPORTMARK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MINORITY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AADHAR_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="M30" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FLAG" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C_NullFlags" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_OS_SSC">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="exam_code" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="seat_no" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schol_no" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="srno" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="center" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sex_cd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="cast_cd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ph_code" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="medium" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="fr_rpt_no" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="rg_pr_is" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="exm_nexm" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tech" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="fg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="bdate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="totsube" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="mname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="eligno" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lang1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lang1a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lang2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lang2a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lang3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lang3a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub41" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub42" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub4a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub5a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub6a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub7a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="op2orsg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="op2la" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="op1la" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schsubj1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schsubj2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schsubj3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l1w" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l1o" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l21w" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l21o" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l22w" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l22o" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l3w" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l3o" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l3i" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="maths1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="maths2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="mathsi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="scithe1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="scithe2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="scipra1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="scipra2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sosci1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sosci2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="soscii" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="opp1mark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="opp2mark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="opp3mark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="opp4mark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ict1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ict2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schgra1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schgra2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schgra3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schgra4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="condsub1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="condsub2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="condsub3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="condsub4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="condsub5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="condsub6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj7gr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="gtotal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="perc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="passfail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="grades" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="absenti" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="seatold" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sesyr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="filler" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sport" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sportmark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="grace" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ind" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub1pf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub2pf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub3pf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub4pf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub5pf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub6pf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="subdrop" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="outofmark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tot500" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tot550" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tot650" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="perc500" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="perc550" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="perc650" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="meritperc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="minority" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="t818283" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="art" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="aadhar" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="bplace" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="div" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="cata" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="finalcata" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_OS_SSC_Applied">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="exam_code" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="seat_no" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schol_no" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="srno" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="center" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sex_cd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="cast_cd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ph_code" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="medium" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="fr_rpt_no" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="rg_pr_is" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="exm_nexm" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tech" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="fg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="bdate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="totsube" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="mname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="eligno" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lang1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lang1a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lang2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lang2a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lang3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lang3a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub41" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub42" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub4a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub5a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub6a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub7a" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="op2orsg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="op2la" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="op1la" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schsubj1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schsubj2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schsubj3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l1w" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l1o" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l21w" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l21o" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l22w" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l22o" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l3w" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l3o" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="l3i" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="maths1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="maths2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="mathsi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="scithe1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="scithe2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="scipra1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="scipra2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sosci1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sosci2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="soscii" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="opp1mark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="opp2mark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="opp3mark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="opp4mark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ict1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ict2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schgra1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schgra2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schgra3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schgra4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="condsub1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="condsub2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="condsub3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="condsub4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="condsub5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="condsub6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tsubj7gr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="gtotal" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="perc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="passfail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="grades" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="absenti" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="seatold" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sesyr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="filler" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sport" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sportmark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="grace" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ind" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub1pf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub2pf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub3pf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub4pf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub5pf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sub6pf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="subdrop" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="outofmark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tot500" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tot550" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tot650" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="perc500" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="perc550" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="perc650" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="meritperc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="minority" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="t818283" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="art" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="aadhar" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="bplace" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="div" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="cata" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="finalcata" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_Site_Block">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Head" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Tbl_SSC_Data">
+    <Key>
+      <PropertyRef Name="SEAT" />
+    </Key>
+    <Property Name="DIV" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SCH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SEAT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MARK8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TOTAL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OUTOF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SIGN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GRACE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="COURSE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MOTHER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_SSC_Migration">
+    <Key>
+      <PropertyRef Name="Unique_ID_Payment" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Case_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Father_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mother_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_No1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_No2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Seat_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Exam" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Marks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Percentage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Center_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Center_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Index_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="School_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Copy_Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="Unique_ID_Payment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Div_Code" Type="Int32" />
+    <Property Name="Pre_Ref_ID" Type="Int32" />
+    <Property Name="OnDateTime" Type="DateTime" Precision="3" />
+    <Property Name="Email_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Mode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Responce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Reply_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Tbl_SSC_Migration_Pri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Father_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mother_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_No1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_No2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Seat_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Exam" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Marks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Percentage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Center_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Center_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Index_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="School_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Copy_Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="Unique_ID_Payment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Div_Code" Type="Int32" />
+    <Property Name="OnDateTime" Type="DateTime" Precision="3" />
+    <Property Name="Email_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Mode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Tbl_SSC_Payment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pgRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PGTxnNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SabPaisaTxId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="issuerRefNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="authIdCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="clientTxnId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="payMode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="spRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="bid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="clientCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="payeeProfile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="transDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="spRespStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="m3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="challanNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="reMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="orgTxnAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="programId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="midName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Add" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf16" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf17" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf18" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf19" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_SSC_Payment_Error">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pgRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PGTxnNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SabPaisaTxId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="issuerRefNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="authIdCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="clientTxnId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="payMode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="spRespCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="bid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="clientCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="payeeProfile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="transDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="spRespStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="m3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="challanNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="reMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="orgTxnAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="programId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="midName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Add" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="param4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf16" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf17" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf18" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf19" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="udf20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_SSC_Student_Subject">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Seat_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="Case_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Head" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Sub_Code" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Actual_Marks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Update_Marks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Tbl_SSC_SUB">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SUBCODE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUBNAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_SSC_UID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DIV" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SEAT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PAP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_SSC_Verification">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Seat_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Payment_Head" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Email_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Mode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Charge" Type="Double" />
+    <Property Name="Total_Payment" Type="Double" />
+    <Property Name="SUB1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Unique_ID_Payment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Case_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Div_Code" Type="Int32" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Responce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Reply_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Pre_Ref_ID" Type="Int32" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Tbl_SSC_Verification_Pri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Seat_No" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Payment_Head" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Taluka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Email_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Mode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Charge" Type="Double" />
+    <Property Name="Total_Payment" Type="Double" />
+    <Property Name="SUB1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB4" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB5" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB6" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SUB7" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Unique_ID_Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Unique_ID_Seat_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Case_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Div_Code" Type="Int32" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Responce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Reply_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="Verification2022Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tbl_Admin" EntityType="Self.Tbl_Admin" />
+    <EntitySet Name="Tbl_College_Email" EntityType="Self.Tbl_College_Email" />
+    <EntitySet Name="Tbl_Div_Details" EntityType="Self.Tbl_Div_Details" />
+    <EntitySet Name="Tbl_Div_Login" EntityType="Self.Tbl_Div_Login" />
+    <EntitySet Name="Tbl_HSC_Data" EntityType="Self.Tbl_HSC_Data" />
+    <EntitySet Name="Tbl_HSC_Division_Block" EntityType="Self.Tbl_HSC_Division_Block" />
+    <EntitySet Name="Tbl_HSC_Payment" EntityType="Self.Tbl_HSC_Payment" />
+    <EntitySet Name="Tbl_HSC_Payment_Error" EntityType="Self.Tbl_HSC_Payment_Error" />
+    <EntitySet Name="Tbl_HSC_Student_Subject" EntityType="Self.Tbl_HSC_Student_Subject" />
+    <EntitySet Name="Tbl_HSC_SUB" EntityType="Self.Tbl_HSC_SUB" />
+    <EntitySet Name="Tbl_HSC_UID" EntityType="Self.Tbl_HSC_UID" />
+    <EntitySet Name="Tbl_HSC_Verification" EntityType="Self.Tbl_HSC_Verification" />
+    <EntitySet Name="Tbl_HSC_Verification_Pri" EntityType="Self.Tbl_HSC_Verification_Pri" />
+    <EntitySet Name="Tbl_Migration" EntityType="Self.Tbl_Migration" />
+    <EntitySet Name="Tbl_Migration_Pri" EntityType="Self.Tbl_Migration_Pri" />
+    <EntitySet Name="Tbl_OS_HSC" EntityType="Self.Tbl_OS_HSC" />
+    <EntitySet Name="Tbl_OS_HSC_Applied" EntityType="Self.Tbl_OS_HSC_Applied" />
+    <EntitySet Name="Tbl_OS_SSC" EntityType="Self.Tbl_OS_SSC" />
+    <EntitySet Name="Tbl_OS_SSC_Applied" EntityType="Self.Tbl_OS_SSC_Applied" />
+    <EntitySet Name="Tbl_Site_Block" EntityType="Self.Tbl_Site_Block" />
+    <EntitySet Name="Tbl_SSC_Data" EntityType="Self.Tbl_SSC_Data" />
+    <EntitySet Name="Tbl_SSC_Migration" EntityType="Self.Tbl_SSC_Migration" />
+    <EntitySet Name="Tbl_SSC_Migration_Pri" EntityType="Self.Tbl_SSC_Migration_Pri" />
+    <EntitySet Name="Tbl_SSC_Payment" EntityType="Self.Tbl_SSC_Payment" />
+    <EntitySet Name="Tbl_SSC_Payment_Error" EntityType="Self.Tbl_SSC_Payment_Error" />
+    <EntitySet Name="Tbl_SSC_Student_Subject" EntityType="Self.Tbl_SSC_Student_Subject" />
+    <EntitySet Name="Tbl_SSC_SUB" EntityType="Self.Tbl_SSC_SUB" />
+    <EntitySet Name="Tbl_SSC_UID" EntityType="Self.Tbl_SSC_UID" />
+    <EntitySet Name="Tbl_SSC_Verification" EntityType="Self.Tbl_SSC_Verification" />
+    <EntitySet Name="Tbl_SSC_Verification_Pri" EntityType="Self.Tbl_SSC_Verification_Pri" />
+    <FunctionImport Name="SP_INSERT_SSC_STUDENT_DATA">
+      <Parameter Name="ACTION" Mode="In" Type="String" />
+      <Parameter Name="Seat_No" Mode="In" Type="String" />
+      <Parameter Name="Div_code" Mode="In" Type="Int32" />
+      <Parameter Name="Payment_Head" Mode="In" Type="Int32" />
+      <Parameter Name="Unique_ID_Payment" Mode="In" Type="String" />
+      <Parameter Name="Unique_ID_Seat_No" Mode="In" Type="String" />
+      <Parameter Name="Pre_Ref_ID" Mode="In" Type="Int32" />
+      <Parameter Name="RESULT" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_INSERT_SSC_STUDENT_MIGRATION">
+      <Parameter Name="ACTION" Mode="In" Type="String" />
+      <Parameter Name="Seat_No" Mode="In" Type="String" />
+      <Parameter Name="Div_Code" Mode="In" Type="Int32" />
+      <Parameter Name="Unique_ID_Payment" Mode="In" Type="String" />
+      <Parameter Name="Unique_ID_Seat_No" Mode="In" Type="String" />
+      <Parameter Name="Pre_Ref_ID" Mode="In" Type="Int32" />
+      <Parameter Name="Result" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_INSERT_STUDENT_DATA">
+      <Parameter Name="ACTION" Mode="In" Type="String" />
+      <Parameter Name="Seat_No" Mode="In" Type="String" />
+      <Parameter Name="Div_code" Mode="In" Type="Int32" />
+      <Parameter Name="Payment_Head" Mode="In" Type="Int32" />
+      <Parameter Name="Unique_ID_Payment" Mode="In" Type="String" />
+      <Parameter Name="Unique_ID_Seat_No" Mode="In" Type="String" />
+      <Parameter Name="Pre_Ref_ID" Mode="In" Type="Int32" />
+      <Parameter Name="RESULT" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_INSERT_STUDENT_MIGRATION">
+      <Parameter Name="ACTION" Mode="In" Type="String" />
+      <Parameter Name="Seat_No" Mode="In" Type="String" />
+      <Parameter Name="Div_Code" Mode="In" Type="Int32" />
+      <Parameter Name="Unique_ID_Payment" Mode="In" Type="String" />
+      <Parameter Name="Unique_ID_Seat_No" Mode="In" Type="String" />
+      <Parameter Name="Pre_Ref_ID" Mode="In" Type="Int32" />
+      <Parameter Name="Result" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Payment_Entry">
+      <Parameter Name="clientTxnId" Mode="In" Type="String" />
+      <Parameter Name="firstName" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="spRespStatus" Mode="In" Type="String" />
+      <Parameter Name="udf17" Mode="In" Type="String" />
+      <Parameter Name="udf18" Mode="In" Type="String" />
+      <Parameter Name="udf20" Mode="In" Type="String" />
+      <Parameter Name="udf19" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Fun_Sp_Payment_Entry" EntitySet="Tbl_SSC_Payment" ReturnType="Collection(Verification2022Model.Tbl_SSC_Payment)">
+      <Parameter Name="clientTxnId" Mode="In" Type="String" />
+      <Parameter Name="firstName" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="spRespStatus" Mode="In" Type="String" />
+      <Parameter Name="udf17" Mode="In" Type="String" />
+      <Parameter Name="udf18" Mode="In" Type="String" />
+      <Parameter Name="udf20" Mode="In" Type="String" />
+      <Parameter Name="udf19" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_HSC_Payment_Entry">
+      <Parameter Name="clientTxnId" Mode="In" Type="String" />
+      <Parameter Name="firstName" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="spRespStatus" Mode="In" Type="String" />
+      <Parameter Name="udf17" Mode="In" Type="String" />
+      <Parameter Name="udf18" Mode="In" Type="String" />
+      <Parameter Name="udf20" Mode="In" Type="String" />
+      <Parameter Name="udf19" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Fun_Sp_HSC_Payment_Entry" EntitySet="Tbl_HSC_Payment_Error" ReturnType="Collection(Verification2022Model.Tbl_HSC_Payment_Error)">
+      <Parameter Name="clientTxnId" Mode="In" Type="String" />
+      <Parameter Name="firstName" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="spRespStatus" Mode="In" Type="String" />
+      <Parameter Name="udf17" Mode="In" Type="String" />
+      <Parameter Name="udf18" Mode="In" Type="String" />
+      <Parameter Name="udf20" Mode="In" Type="String" />
+      <Parameter Name="udf19" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>
